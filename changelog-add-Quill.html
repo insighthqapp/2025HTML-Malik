@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- favicon -->
+   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+   <link rel="icon" sizes="32x32" href="assets/img/favicon/favicon-32x32.png" type="image/png">
+   <link rel="icon" sizes="16x16" href="assets/img/favicon/favicon-16x16.png" type="image/png">
+   <link rel="shortcut icon" href="assets/img/favicon/favicon.ico" type="image/x-icon">
+   <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+   <link rel="stylesheet" href="assets/css/select2.min.css">
+   <link rel="stylesheet" href="assets/css/spectrum.min.css">
+   <link rel="stylesheet" href="assets/css/daterangepicker.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/responsive.css">
+   <!--Quill CDN-->
+   <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
+   <style>
+      .select2-container{display: none;}
+       
+   </style>
+
+   <title>Add New Changelog</title>
+</head>
+
+<body>
+   <!-- header section start -->
+   <header class="header sticky-top py-3">
+      <div class="header-wrapper d-flex align-items-center justify-content-between gap-4">
+         <h4 class="header-title fw-semibold mb-0">New Changelog / Edit Changelog</h4>
+         <a href="#" class="widget-item-btn d-inline-block rounded fw-semibold">Close</a>
+      </div>
+   </header>
+   <!-- header section end -->
+   <main>
+      <!-- main content start -->
+      <div class="main-content">
+         <div class="main-content-wrapper">
+            <form action="#" class="add-changelog-form form mx-auto">
+               <div class="upload-input">
+                  <input type="file" class="visually-hidden" id="feature-banner">
+                  <label for="feature-banner" class="d-block text-center rounded-3">
+                     <span class="upload-btn widget-item-btn d-inline-block rounded fw-semibold mb-2">Upload Features Banner</span>
+                     <span class="upload-input-text d-block">Recommended size 600 / 400 Size</span>
+                  </label>
+               </div>
+               <div class="form-input-wrapper d-flex flex-column gap-4 my-4 pt-1 pb-3">
+                  <div class="form-input">
+                     <label for="changelog" class="input-label mb-1 fw-medium">Changelog / Announcement</label>
+                     <input type="text" id="changelog" class="input-field w-100 rounded" placeholder="Your first name">
+                  </div>
+                  <div class="form-input">
+                     <label for="changelog-desc" class="input-label mb-1 fw-medium">Changelog / Announcement</label>
+                     <textarea id="changelog" class="input-field changelog-textarea w-100 rounded"></textarea>
+                  </div>
+                 <!-- Container -->
+                 <div id="toolbar-container">
+                  <span class="ql-formats">
+                    <select class="ql-font"></select>
+                    <select class="ql-size"></select>
+                  </span>
+                  <span class="ql-formats">
+                    <button class="ql-bold"></button>
+                    <button class="ql-italic"></button>
+                    <button class="ql-underline"></button>
+                    <button class="ql-strike"></button>
+                  </span>
+                  <span class="ql-formats">
+                    <select class="ql-color"></select>
+                    <select class="ql-background"></select>
+                  </span>
+                  <span class="ql-formats">
+                    <button class="ql-script" value="sub"></button>
+                    <button class="ql-script" value="super"></button>
+                  </span>
+                  <span class="ql-formats">
+                    <button class="ql-header" value="1"></button>
+                    <button class="ql-header" value="2"></button>
+                    <button class="ql-blockquote"></button>
+                    <button class="ql-code-block"></button>
+                  </span>
+                  <span class="ql-formats">
+                    <button class="ql-list" value="ordered"></button>
+                    <button class="ql-list" value="bullet"></button>
+                    <button class="ql-indent" value="-1"></button>
+                    <button class="ql-indent" value="+1"></button>
+                  </span>
+                  <span class="ql-formats">
+                    <button class="ql-direction" value="rtl"></button>
+                    <select class="ql-align"></select>
+                  </span>
+                  <span class="ql-formats">
+                    <button class="ql-link"></button>
+                    <button class="ql-image"></button>
+                    <button class="ql-video"></button>
+                    <button class="ql-formula"></button>
+                  </span>
+                  <span class="ql-formats">
+                    <button class="ql-clean"></button>
+                  </span>
+                </div>
+                
+                  <div id="editor" style="min-height: 300px; margin-top: -28px;"></div>
+                
+                  
+                  <div class="form-widget rounded p-3 p-md-4">
+                     <div class="form-condition-container">
+                        <div class="d-flex flex-column gap-3 mb-3 pb-1">
+                           <div class="form-input form-condition">
+                              <input type="checkbox" class="visually-hidden" id="show-widget" checked>
+                              <label for="show-widget" class="d-flex align-items-center gap-2 rounded">
+                                 <span class="checkbox d-flex align-items-center justify-content-center rounded-1 text-white"><i class="fa-regular fa-check"></i></span> Show from website & widgets </label>
+                           </div>
+                           <div class="form-input form-condition">
+                              <input type="checkbox" class="visually-hidden" id="send-email" checked>
+                              <label for="send-email" class="d-flex align-items-center gap-2 rounded">
+                                 <span class="checkbox d-flex align-items-center justify-content-center rounded-1 text-white"><i class="fa-regular fa-check"></i></span> Send email to 450 subscriber </label>
+                           </div>
+                        </div>
+                        <a href="#" class="view-subscribe-btn d-inline-block text-decoration-underline">View subscribers</a>
+                     </div>
+                     <div class="form-input is-error">
+                        <label for="targeted-user" class="input-label mb-1 fw-medium">Targeted users</label>
+                        <select id="targeted-user" class="input-field w-100 rounded bg-white">
+                           <option value="select">Selected value</option>
+                           <option value="Targeted users">Targeted users</option>
+                           <option value="Targeted users">Targeted users</option>
+                           <option value="Targeted users">Targeted users</option>
+                        </select>
+                        <div class="error-msg align-items-center gap-1 mt-1 fw-semibold"><img src="assets/img/icon/alert-fill.svg" alt="alert-fill"> Validation message</div>
+                     </div>
+                  </div>
+                  <div class="form-widget rounded p-3 p-md-4">
+                     <h6 class="form-widget-title fw-normal">Feedback Releases</h6>
+                     <div class="form-input">
+                        <label for="feedback-request" class="input-label mb-1 fw-medium">Select feedback request</label>
+                        <select id="feedback-request" class="input-field w-100 rounded bg-white">
+                           <option value="select">Selected value</option>
+                           <option value="feedback request">feedback request</option>
+                           <option value="feedback request">feedback request</option>
+                           <option value="feedback request">feedback request</option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="form-input">
+                     <label for="categories" class="input-label mb-1 fw-medium">Categories</label>
+                     <select id="categories" class="category-select input-field w-100 rounded bg-white" multiple="multiple">
+                        <option value="New Features" selected>New Features</option>
+                        <option value="Bugs" selected>Bugs</option>
+                        <option value="New Features">New Features</option>
+                        <option value="Bugs">Bugs</option>
+                     </select>
+                  </div>
+                  <div class="form-input">
+                     <label for="schedule-date" class="input-label mb-1 fw-medium">Schedule your post - pick the date you want to publish it *</label>
+                     <input type="text" id="schedule-date" class="input-field w-100 rounded" name="daterange">
+                  </div>
+                  <div class="form-input">
+                     <label for="status-of-change" class="input-label mb-1 fw-medium">Status of Change log / announcement</label>
+                     <select id="status-of-change" class="input-field w-100 rounded bg-white">
+                        <option value="select">Selected value</option>
+                        <option value="selected value">Selected value</option>
+                        <option value="selected value">Selected value</option>
+                        <option value="selected value">Selected value</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="form-footer d-flex align-items-center flex-wrap">
+                  <button type="submit" class="form-btn theme-btn fw-semibold rounded border-0">Save & Published</button>
+                  <button type="submit" class="form-btn theme-btn fw-semibold rounded border-0">Save as draft</button>
+                  <button type="submit" class="form-btn theme-btn secondary fw-semibold rounded">Cancel</button>
+               </div>
+            </form>
+         </div>
+      </div>
+      <!-- main content end -->
+   </main>
+   <!-- footer section start -->
+   <footer class="footer">
+      <p class="copyright-text text-center mb-0 fw-semibold">© 2025 InsightHQ. All rights reserved</p>
+   </footer>
+   <!-- footer section end -->
+
+   <!-- toast message start -->
+   <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true" id="success-toast">
+      <div class="toast-container d-flex rounded overflow-hidden">
+         <button type="button" title="info" class="danger-btn theme-btn flex-shrink-0 fs-6 p-3 border-0 mb-0"><img src="assets/img/icon/error.svg" alt="error"></button>
+         <div class="toast-wrapper flex-grow-1 d-flex gap-2 bg-white py-2 py-sm-3 ps-3 pe-2 rounded rounded-start-0">
+            <p class="toast-message mb-0 flex-grow-1">Success! Team member invite has been sent.</p>
+            <button type="button" title="close toast" class="toast-close-btn d-flex align-items-center justify-content-center align-self-center flex-shrink-0 bg-transparent border-0" data-bs-dismiss="toast"><i class="fa-regular fa-xmark"></i></button>
+         </div>
+      </div>
+   </div>
+   <!-- toast message end -->
+    <!-- Include the Quill library -->
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+
+<!-- Initialize Quill editor -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+   const quill = new Quill('#editor', {
+    modules: {
+      syntax: true,
+      toolbar: '#toolbar-container',
+    },
+    placeholder: 'Compose an epic...',
+    theme: 'snow',
+  });
+});
+
+</script>
+
+   <!-- Optional JavaScript; choose one of the two! -->
+   <script src="assets/js/jquery-3.7.1.min.js"></script>
+   <script src="assets/js/popper.min.js"></script>
+   <script src="assets/js/bootstrap.min.js"></script>
+   <script src="assets/js/select2.min.js"></script>
+   <script src="assets/js/spectrum.min.js"></script>
+   <script src="assets/js/moment.min.js"></script>
+   <script src="assets/js/daterangepicker.js"></script>
+   <script src="assets/js/main.js"></script>
+   
+</body>
+
+</html>

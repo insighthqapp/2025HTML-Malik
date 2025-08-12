@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clients - Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <link href="css/customstyle.css" rel="stylesheet">
+</head>
+<body>
+    <div class="d-flex">
+        <div class="sidebar bg-dark text-white">
+            <div class="sidebar-header p-3">
+                <h4>Admin Panel</h4>
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link"><i class="bi bi-speedometer2"></i> Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="clients.html" class="nav-link active"><i class="bi bi-people"></i> Clients</a>
+                </li>
+                <li class="nav-item">
+                    <a href="changelog.html" class="nav-link"><i class="bi bi-clock-history"></i> Changelog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="articles.html" class="nav-link"><i class="bi bi-file-text"></i> Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a href="knowledge.html" class="nav-link"><i class="bi bi-book"></i> Knowledge Board</a>
+                </li>
+                <li class="nav-item">
+                    <a href="billing.html" class="nav-link"><i class="bi bi-credit-card"></i> Billing & Payments</a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link"><i class="bi bi-gear"></i> Settings</a>
+                </li>
+                <li class="nav-item mt-auto">
+                    <a href="index.html" class="nav-link"><i class="bi bi-box-arrow-left"></i> Logoff</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="container-fluid p-4">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2>Clients</h2>
+                    <button class="btn btn-primary">
+                        <i class="bi bi-plus-circle me-2"></i>Add Client
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <table id="clientsTable" class="table table-striped" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Status</th>
+                                    <th>Full Name</th>
+                                    <th>Email Address</th>
+                                    <th>Membership</th>
+                                    <th>Change Log</th>
+                                    <th>Articles</th>
+                                    <th>Feedback</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>001</td>
+                                    <td><span class="badge bg-success">Active</span></td>
+                                    <td>John Smith</td>
+                                    <td>john.smith@email.com</td>
+                                    <td><span class="badge bg-primary">Paid</span></td>
+                                    <td>12</td>
+                                    <td>8</td>
+                                    <td>15</td>
+                                    <td><a href="#" class="text-primary"><i class="bi bi-eye"></i></a></td>
+                                </tr>
+                                <!-- Add 24 more similar rows with different data -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#clientsTable').DataTable({
+                pageLength: 10,
+                order: [[0, 'asc']],
+                data: [
+                    ['002', '<span class="badge bg-success">Active</span>', 'Emma Wilson', 'emma.w@email.com', '<span class="badge bg-primary">Paid</span>', '8', '5', '10', '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['003', '<span class="badge bg-danger">Inactive</span>', 'Michael Brown', 'michael.b@email.com', '<span class="badge bg-secondary">Free</span>', '3', '2', '4', '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['004', '<span class="badge bg-success">Active</span>', 'Sarah Davis', 'sarah.d@email.com', '<span class="badge bg-primary">Paid</span>', '15', '12', '20', '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['005', '<span class="badge bg-success">Active</span>', 'James Wilson', 'james.w@email.com', '<span class="badge bg-primary">Paid</span>', '7', '4', '8', '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['006', '<span class="badge bg-danger">Inactive</span>', 'Lisa Anderson', 'lisa.a@email.com', '<span class="badge bg-secondary">Free</span>', '2', '1', '3', '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    // Add more rows to complete 25 records
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

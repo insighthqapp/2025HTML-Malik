@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- favicon -->
+   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+   <link rel="icon" sizes="32x32" href="assets/img/favicon/favicon-32x32.png" type="image/png">
+   <link rel="icon" sizes="16x16" href="assets/img/favicon/favicon-16x16.png" type="image/png">
+   <link rel="shortcut icon" href="assets/img/favicon/favicon.ico" type="image/x-icon">
+   <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+   <link rel="stylesheet" href="assets/css/select2.min.css">
+   <link rel="stylesheet" href="assets/css/spectrum.min.css">
+   <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.bootstrap5.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/responsive.css">
+   <title>Subscribe List</title>
+</head>
+
+<body>
+   <!-- header section start -->
+   <header class="header sticky-top">
+      <div class="header-wrapper d-flex align-items-center justify-content-between gap-4">
+         <div class="header-left d-flex align-items-center gap-3">
+            <button type="button" title="close sidebar" class="sidebar-toggle bg-transparent border-0 fs-5 d-xl-none"><i class="fa-regular fa-bars"></i></button>
+            <a href="#" class="header-logo logo d-inline-block"><img src="assets/img/logo.svg" alt="logo"></a>
+         </div>
+         <div class="profile-container d-flex align-items-center justify-content-end pb-0">
+            <div class="profile d-flex align-items-center gap-2 gap-sm-3">
+               <img src="assets/img/profile-img.png" alt="profile-img" class="profile-img rounded-circle object-fit-cover">
+               <div class="profile-wrapper d-flex align-items-end gap-2">
+                  <div class="profile-info">
+                     <span class="d-block">Welcome</span>
+                     <h6 class="fw-semibold mb-0">Clarence D. Shock</h6>
+                  </div>
+                  <div class="header-dropdown dropdown">
+                     <button type="button" title="action" data-bs-toggle="dropdown" aria-expanded="false" class="header-dropdown-toggle dropdown-toggle d-inline-flex bg-transparent border-0"><i class="fa-solid fa-caret-down"></i></button>
+                     <ul class="dropdown-menu rounded-0 border-top-0 border-bottom-0">
+                        <li><a class="dropdown-item" href="#">Update Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Change Password</a></li>
+                        <li><a class="dropdown-item" href="#">Logoff</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <button type="button" title="sign out" data-bs-toggle="tooltip" data-bs-title="Log out" class="logout-btn d-flex align-items-center justify-content-center bg-transparent border-0"><i class="fa-regular fa-arrow-right-from-bracket"></i></button>
+         </div>
+      </div>
+   </header>
+   <!-- header section end -->
+   <main>
+      <div class="main-container d-flex position-relative">
+         <!-- sidebar start -->
+         <aside class="sidebar sticky-top overflow-auto bg-white flex-shrink-0">
+            <div class="sidebar-header sticky-top text-end d-xl-none p-3">
+               <button type="button" title="close sidebar" class="sidebar-toggle bg-transparent border-0 fs-5"><i class="fa-regular fa-xmark"></i></button>
+            </div>
+            <div class="sidebar-menu d-flex flex-column">
+               <div class="sidebar-menu-block">
+                  <h6 class="sidebar-menu-title fw-semibold text-uppercase">Navigation</h6>
+                  <ul class="sidebar-menu-list">
+                     <li class="sidebar-menu-item">
+                        <a href="dashboard.html" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/home.png" alt="home" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Dashboard</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="changelog.html" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/megaphone.png" alt="megaphone" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Announcement</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/feedback.png" alt="feedback" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Feedback</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/roadmap.png" alt="roadmap" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Product Roadmap</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/star-comment.png" alt="star-comment" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Testimonials</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="help-center.html" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/book.png" alt="book" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Knowledge Board</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/research-repository.svg" alt="research-repository" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Research Repo</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="sidebar-menu-block">
+                  <h6 class="sidebar-menu-title fw-semibold text-uppercase">User</h6>
+                  <ul class="sidebar-menu-list">
+                     <li class="sidebar-menu-item">
+                        <a href="subscribe-list.html" class="sidebar-menu-link d-flex align-items-center active">
+                           <img src="assets/img/icon/list.png" alt="list" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Subscribe List</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="subscribe-segmentation.html" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/user.png" alt="user avatar" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Subscribe Segmentation</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/persona.svg" alt="user avatar" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Personas</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/journey-mapping.svg" alt="journey-mapping" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Journey Mapping</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="sidebar-menu-block">
+                  <h6 class="sidebar-menu-title fw-semibold text-uppercase">Team members</h6>
+                  <ul class="sidebar-menu-list">
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/user-plus.png" alt="user plus" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Invite a Team Member</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="sidebar-menu-block">
+                  <h6 class="sidebar-menu-title fw-semibold text-uppercase">Settings</h6>
+                  <ul class="sidebar-menu-list">
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/settings.png" alt="settings" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">App Settings</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/website.png" alt="website" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">View Your Website</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="widget.html" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/widget.png" alt="widget" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Your Widget</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </aside>
+         <!-- sidebar overlay -->
+         <div class="sidebar-overlay fixed-top w-100 h-100 d-xl-none"></div>
+         <!-- sidebar end -->
+         <!-- main content start -->
+         <div class="main-content flex-grow-1 overflow-auto">
+            <div class="main-content-wrapper">
+               <!-- breadcrumbs start -->
+               <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb mb-2">
+                     <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                     <li class="breadcrumb-item active" aria-current="page">Subscribe List</li>
+                  </ol>
+               </nav>
+               <!-- breadcrumbs end -->
+               <!-- subscribe list section start -->
+               <section class="subscribe-list">
+                  <div class="section-title mb-4">
+                     <h2 class="fw-semibold mb-0">Subscribe List (7890)</h2>
+                     <p class="mb-0">At GitHub, we have created a set of guidelines that contributors and maintainers can reference when creating and updating components. These guidelines are available to read at our open source repository. <a href="#">Read the authoring guidelines</a></p>
+                  </div>
+                  <div class="subscribe-list-table-container table-responsive">
+                     <table class="subscribe-list-table w-100 datatable-active">
+                        <thead>
+                           <tr>
+                              <th class="fw-medium border-start-0">Full Name</th>
+                              <th class="fw-medium">Email Address</th>
+                              <th class="fw-medium">Date of Register</th>
+                              <th class="fw-medium">Type of Member</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td class="fw-medium"><a role="button" href="#updateInfoModal" data-bs-toggle="modal" class="subscriber-name d-inline-block text-decoration-underline">William M. Baltz</a></td>
+                              <td class="fw-medium">William.Baltz@gmail.com</td>
+                              <td class="fw-medium">04/10/2024, 10:30 am</td>
+                              <td class="fw-medium"><span class="tag d-inline-block rounded-pill">Member</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fw-medium"><a role="button" href="#updateInfoModal" data-bs-toggle="modal"  class="subscriber-name d-inline-block text-decoration-underline">Paul C. Rocha</a></td>
+                              <td class="fw-medium">Paul.Rocha@gmail.com</td>
+                              <td class="fw-medium">04/10/2024, 10:30 am</td>
+                              <td class="fw-medium"><span class="tag d-inline-block rounded-pill">Member</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fw-medium"><a role="button" href="#updateInfoModal" data-bs-toggle="modal" class="subscriber-name d-inline-block text-decoration-underline">Rachel Hayes</a></td>
+                              <td class="fw-medium">Paul.Rocha@gmail.com</td>
+                              <td class="fw-medium">04/10/2024, 10:30 am</td>
+                              <td class="fw-medium"><span class="tag d-inline-block rounded-pill">Paid Member</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fw-medium"><a role="button" href="#updateInfoModal" data-bs-toggle="modal" class="subscriber-name d-inline-block text-decoration-underline">Kristi Henson</a></td>
+                              <td class="fw-medium">Kristi.Henson@gmail.com</td>
+                              <td class="fw-medium">04/10/2024, 10:30 am</td>
+                              <td class="fw-medium"><span class="tag d-inline-block rounded-pill">Paid Member</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fw-medium"><a role="button" href="#updateInfoModal" data-bs-toggle="modal" class="subscriber-name d-inline-block text-decoration-underline">Ernest Yates</a></td>
+                              <td class="fw-medium">mail@gmail.com</td>
+                              <td class="fw-medium">04/10/2024, 10:30 am</td>
+                              <td class="fw-medium"><span class="tag d-inline-block rounded-pill">Paid Member</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fw-medium"><a role="button" href="#updateInfoModal" data-bs-toggle="modal" class="subscriber-name d-inline-block text-decoration-underline">Ursula Friedman</a></td>
+                              <td class="fw-medium">mail@gmail.com</td>
+                              <td class="fw-medium">04/10/2024, 10:30 am</td>
+                              <td class="fw-medium"><span class="tag d-inline-block rounded-pill">Paid Member</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fw-medium"><a role="button" href="#updateInfoModal" data-bs-toggle="modal" class="subscriber-name d-inline-block text-decoration-underline">Wally Shah</a></td>
+                              <td class="fw-medium">mail@gmail.com</td>
+                              <td class="fw-medium">04/10/2024, 10:30 am</td>
+                              <td class="fw-medium"><span class="tag d-inline-block rounded-pill">Paid Member</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fw-medium"><a role="button" href="#updateInfoModal" data-bs-toggle="modal" class="subscriber-name d-inline-block text-decoration-underline">Hayden Callahan</a></td>
+                              <td class="fw-medium">mail@gmail.com</td>
+                              <td class="fw-medium">04/10/2024, 10:30 am</td>
+                              <td class="fw-medium"><span class="tag d-inline-block rounded-pill">Paid Member</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fw-medium"><a role="button" href="#updateInfoModal" data-bs-toggle="modal" class="subscriber-name d-inline-block text-decoration-underline">Ginger Nguyen</a></td>
+                              <td class="fw-medium">mail@gmail.com</td>
+                              <td class="fw-medium">04/10/2024, 10:30 am</td>
+                              <td class="fw-medium"><span class="tag d-inline-block rounded-pill">Paid Member</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fw-medium"><a role="button" href="#updateInfoModal" data-bs-toggle="modal" class="subscriber-name d-inline-block text-decoration-underline">Leif Hart</a></td>
+                              <td class="fw-medium">mail@gmail.com</td>
+                              <td class="fw-medium">04/10/2024, 10:30 am</td>
+                              <td class="fw-medium"><span class="tag d-inline-block rounded-pill">Paid Member</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fw-medium"><a role="button" href="#updateInfoModal" data-bs-toggle="modal" class="subscriber-name d-inline-block text-decoration-underline">Jeremy Brewer</a></td>
+                              <td class="fw-medium">mail@gmail.com</td>
+                              <td class="fw-medium">04/10/2024, 10:30 am</td>
+                              <td class="fw-medium"><span class="tag d-inline-block rounded-pill">Paid Member</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fw-medium"><a role="button" href="#updateInfoModal" data-bs-toggle="modal" class="subscriber-name d-inline-block text-decoration-underline">Emerson Dunn</a></td>
+                              <td class="fw-medium">mail@gmail.com</td>
+                              <td class="fw-medium">04/10/2024, 10:30 am</td>
+                              <td class="fw-medium"><span class="tag d-inline-block rounded-pill">Paid Member</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fw-medium"><a role="button" href="#updateInfoModal" data-bs-toggle="modal" class="subscriber-name d-inline-block text-decoration-underline">Jacinto Gamble</a></td>
+                              <td class="fw-medium">mail@gmail.com</td>
+                              <td class="fw-medium">04/10/2024, 10:30 am</td>
+                              <td class="fw-medium"><span class="tag d-inline-block rounded-pill">Paid Member</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fw-medium"><a role="button" href="#updateInfoModal" data-bs-toggle="modal" class="subscriber-name d-inline-block text-decoration-underline">Monique Forbes</a></td>
+                              <td class="fw-medium">mail@gmail.com</td>
+                              <td class="fw-medium">04/10/2024, 10:30 am</td>
+                              <td class="fw-medium"><span class="tag d-inline-block rounded-pill">Paid Member</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fw-medium"><a role="button" href="#updateInfoModal" data-bs-toggle="modal" class="subscriber-name d-inline-block text-decoration-underline">Dylan Bass</a></td>
+                              <td class="fw-medium">mail@gmail.com</td>
+                              <td class="fw-medium">04/10/2024, 10:30 am</td>
+                              <td class="fw-medium"><span class="tag d-inline-block rounded-pill">Paid Member</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fw-medium"><a role="button" href="#updateInfoModal" data-bs-toggle="modal" class="subscriber-name d-inline-block text-decoration-underline">Therese Peterson</a></td>
+                              <td class="fw-medium">mail@gmail.com</td>
+                              <td class="fw-medium">04/10/2024, 10:30 am</td>
+                              <td class="fw-medium"><span class="tag d-inline-block rounded-pill">Paid Member</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fw-medium"><a role="button" href="#updateInfoModal" data-bs-toggle="modal" class="subscriber-name d-inline-block text-decoration-underline">Rosanne Kidd</a></td>
+                              <td class="fw-medium">mail@gmail.com</td>
+                              <td class="fw-medium">04/10/2024, 10:30 am</td>
+                              <td class="fw-medium"><span class="tag d-inline-block rounded-pill">Paid Member</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fw-medium"><a role="button" href="#updateInfoModal" data-bs-toggle="modal" class="subscriber-name d-inline-block text-decoration-underline">Homer Pitts</a></td>
+                              <td class="fw-medium">mail@gmail.com</td>
+                              <td class="fw-medium">04/10/2024, 10:30 am</td>
+                              <td class="fw-medium"><span class="tag d-inline-block rounded-pill">Paid Member</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fw-medium"><a role="button" href="#updateInfoModal" data-bs-toggle="modal" class="subscriber-name d-inline-block text-decoration-underline">Louisa Gutierrez</a></td>
+                              <td class="fw-medium">mail@gmail.com</td>
+                              <td class="fw-medium">04/10/2024, 10:30 am</td>
+                              <td class="fw-medium"><span class="tag d-inline-block rounded-pill">Paid Member</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fw-medium"><a role="button" href="#updateInfoModal" data-bs-toggle="modal" class="subscriber-name d-inline-block text-decoration-underline">Julie Murphy</a></td>
+                              <td class="fw-medium">mail@gmail.com</td>
+                              <td class="fw-medium">04/10/2024, 10:30 am</td>
+                              <td class="fw-medium"><span class="tag d-inline-block rounded-pill">Paid Member</span></td>
+                           </tr>
+                           <tr>
+                              <td class="fw-medium"><a role="button" href="#updateInfoModal" data-bs-toggle="modal" class="subscriber-name d-inline-block text-decoration-underline">Katy Walke</a></td>
+                              <td class="fw-medium">mail@gmail.com</td>
+                              <td class="fw-medium">04/10/2024, 10:30 am</td>
+                              <td class="fw-medium"><span class="tag d-inline-block rounded-pill">Paid Member</span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </section>
+               <!-- subscribe list section end -->
+            </div>
+         </div>
+         <!-- main content end -->
+      </div>
+   </main>
+   <!-- footer section start -->
+   <footer class="footer">
+      <p class="copyright-text text-center mb-0 fw-semibold">© 2025 InsightHQ. All rights reserved</p>
+   </footer>
+   <!-- footer section end -->
+
+   <!-- update info modal start -->
+   <div class="update-info-modal modal fade" id="updateInfoModal" tabindex="-1" aria-labelledby="updateInfoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable mx-auto">
+         <div class="modal-content border-0">
+            <div class="modal-header border-bottom-0">
+               <div class="section-title mb-0">
+                  <h2 class="fw-semibold mb-0">Update Inforamation</h2>
+                  <p class="mb-0">Enter a name for your new category.</p>
+               </div>
+               <button type="button" class="modal-close bg-transparent border-0 position-absolute z-1 d-flex align-items-center justify-content-center" data-bs-dismiss="modal" aria-label="Close"><i class="fa-regular fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+               <form action="#" class="d-flex flex-column gap-3">
+                  <div class="form-input">
+                     <label for="categories" class="input-label mb-1 fw-medium d-block">Segmentation group</label>
+                     <select id="categories" class="category-select select-inside-modal input-field w-100 rounded bg-white" multiple="multiple">
+                        <option value="New Features" selected>New Features</option>
+                        <option value="Bugs" selected>Bugs</option>
+                        <option value="New Features">New Features</option>
+                        <option value="Bugs">Bugs</option>
+                     </select>
+                  </div>
+                  <div class="form-input">
+                     <label for="full-name" class="input-label mb-1 fw-medium">Full Name</label>
+                     <input type="text" id="full-name" class="input-field w-100 rounded" placeholder="Your first name">
+                  </div>
+                  <div class="form-input">
+                     <label for="email" class="input-label mb-1 fw-medium">Email Address</label>
+                     <input type="email" id="email" class="input-field w-100 rounded" placeholder="Your first name">
+                  </div>
+                  <div class="form-input">
+                     <label for="status" class="input-label mb-1 fw-medium">Status</label>
+                     <select id="status" class="select-inside-modal input-field w-100 rounded bg-white">
+                        <option value="Select Status">Select Status</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                     </select>
+                  </div>
+               </form>
+            </div>
+            <div class="modal-footer justify-content-start border-top-0">
+               <button type="button" class="theme-btn fw-semibold rounded border-0 m-0">Upload and Create a new Segmentations</button>
+               <button type="button" class="theme-btn secondary fw-semibold rounded m-0" data-bs-dismiss="modal">Cancel</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- update info modal end -->
+
+   <!-- Optional JavaScript; choose one of the two! -->
+   <script src="assets/js/jquery-3.7.1.min.js"></script>
+   <script src="assets/js/popper.min.js"></script>
+   <script src="assets/js/bootstrap.min.js"></script>
+   <script src="assets/js/select2.min.js"></script>
+   <script src="assets/js/spectrum.min.js"></script>
+   <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+   <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.min.js"></script>
+   <script src="assets/js/main.js"></script>
+</body>
+
+</html>

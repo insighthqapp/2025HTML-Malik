@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- favicon -->
+   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+   <link rel="icon" sizes="32x32" href="assets/img/favicon/favicon-32x32.png" type="image/png">
+   <link rel="icon" sizes="16x16" href="assets/img/favicon/favicon-16x16.png" type="image/png">
+   <link rel="shortcut icon" href="assets/img/favicon/favicon.ico" type="image/x-icon">
+   <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+   <link rel="stylesheet" href="assets/css/select2.min.css">
+   <link rel="stylesheet" href="assets/css/spectrum.min.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/responsive.css">
+   <title>Changelog Details</title>
+</head>
+
+<body>
+   <!-- header section start -->
+   <header class="header sticky-top">
+      <div class="header-wrapper d-flex align-items-center justify-content-between gap-4">
+         <div class="header-left d-flex align-items-center gap-3">
+            <button type="button" title="close sidebar" class="sidebar-toggle bg-transparent border-0 fs-5 d-xl-none"><i class="fa-regular fa-bars"></i></button>
+            <a href="#" class="header-logo logo d-inline-block"><img src="assets/img/logo.svg" alt="logo"></a>
+         </div>
+         <div class="profile-container d-flex align-items-center justify-content-end pb-0">
+            <div class="profile d-flex align-items-center gap-2 gap-sm-3">
+               <img src="assets/img/profile-img.png" alt="profile-img" class="profile-img rounded-circle object-fit-cover">
+               <div class="profile-wrapper d-flex align-items-end gap-2">
+                  <div class="profile-info">
+                     <span class="d-block">Welcome</span>
+                     <h6 class="fw-semibold mb-0">Clarence D. Shock</h6>
+                  </div>
+                  <div class="header-dropdown dropdown">
+                     <button type="button" title="action" data-bs-toggle="dropdown" aria-expanded="false" class="header-dropdown-toggle dropdown-toggle d-inline-flex bg-transparent border-0"><i class="fa-solid fa-caret-down"></i></button>
+                     <ul class="dropdown-menu rounded-0 border-top-0 border-bottom-0">
+                        <li><a class="dropdown-item" href="#">Update Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Change Password</a></li>
+                        <li><a class="dropdown-item" href="#">Logoff</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <button type="button" title="sign out" data-bs-toggle="tooltip" data-bs-title="Log out" class="logout-btn d-flex align-items-center justify-content-center bg-transparent border-0"><i class="fa-regular fa-arrow-right-from-bracket"></i></button>
+         </div>
+      </div>
+   </header>
+   <!-- header section end -->
+   <main>
+      <div class="main-container d-flex position-relative">
+         <!-- sidebar start -->
+         <aside class="sidebar sticky-top overflow-auto bg-white flex-shrink-0">
+            <div class="sidebar-header sticky-top text-end d-xl-none p-3">
+               <button type="button" title="close sidebar" class="sidebar-toggle bg-transparent border-0 fs-5"><i class="fa-regular fa-xmark"></i></button>
+            </div>
+            <div class="sidebar-menu d-flex flex-column">
+               <div class="sidebar-menu-block">
+                  <h6 class="sidebar-menu-title fw-semibold text-uppercase">Navigation</h6>
+                  <ul class="sidebar-menu-list">
+                     <li class="sidebar-menu-item">
+                        <a href="dashboard.html" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/home.png" alt="home" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Dashboard</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="changelog.html" class="sidebar-menu-link d-flex align-items-center active">
+                           <img src="assets/img/icon/megaphone.png" alt="megaphone" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Announcement</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/feedback.png" alt="feedback" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Feedback</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/roadmap.png" alt="roadmap" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Product Roadmap</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/star-comment.png" alt="star-comment" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Testimonials</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="help-center.html" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/book.png" alt="book" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Knowledge Board</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="sidebar-menu-block">
+                  <h6 class="sidebar-menu-title fw-semibold text-uppercase">User</h6>
+                  <ul class="sidebar-menu-list">
+                     <li class="sidebar-menu-item">
+                        <a href="subscribe-list.html" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/list.png" alt="list" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Subscribe List</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="subscribe-segmentation.html" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/user.png" alt="user avatar" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Subscribe Segmentation</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/user.png" alt="user avatar" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Personas</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="sidebar-menu-block">
+                  <h6 class="sidebar-menu-title fw-semibold text-uppercase">Team members</h6>
+                  <ul class="sidebar-menu-list">
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/user-plus.png" alt="user plus" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Invite a Team Member</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="sidebar-menu-block">
+                  <h6 class="sidebar-menu-title fw-semibold text-uppercase">Settings</h6>
+                  <ul class="sidebar-menu-list">
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/settings.png" alt="settings" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">App Settings</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/website.png" alt="website" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">View Your Website</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="widget.html" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/widget.png" alt="widget" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Your Widget</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </aside>
+         <!-- sidebar overlay -->
+         <div class="sidebar-overlay fixed-top w-100 h-100 d-xl-none"></div>
+         <!-- sidebar end -->
+         <!-- main content start -->
+         <div class="main-content flex-grow-1 overflow-auto">
+            <div class="main-content-wrapper">
+               <div class="d-flex justify-content-between flex-wrap-reverse gap-3">
+                  <!-- breadcrumbs start -->
+                  <nav aria-label="breadcrumb">
+                     <ol class="breadcrumb mb-2">
+                        <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Announcement</li>
+                     </ol>
+                  </nav>
+                  <!-- breadcrumbs end -->
+                  <a href="#" class="back-btn text-decoration-underline">Back to announcements</a>
+               </div>
+               <!-- changelog details section start -->
+               <section class="changelog-detail">
+                  <div class="section-title mb-4">
+                     <h2 class="fw-semibold mb-2 pb-1">Feature Friday - January 17: Enhancements to HubSpot integration and more</h2>
+                     <div class="tags-wrapper d-flex flex-wrap">
+                        <span class="tag d-inline-flex align-items-center rounded-pill fw-semibold"><span class="tag-color green d-block rounded-circle"></span> New Features</span>
+                        <span class="tag d-inline-flex align-items-center rounded-pill fw-semibold"><span class="tag-color yellow d-block rounded-circle"></span> Announcement</span>
+                        <span class="tag d-inline-flex align-items-center rounded-pill fw-semibold"><span class="tag-color red d-block rounded-circle"></span> Bug fix</span>
+                        <span class="tag d-inline-flex align-items-center rounded-pill fw-semibold"><span class="tag-color blue d-block rounded-circle"></span> Enhancement</span>
+                        <span class="tag d-inline-flex align-items-center rounded-pill fw-semibold"><span class="tag-color purple d-block rounded-circle"></span> Request</span>
+                     </div>
+                  </div>
+                  <div class="changelog-detail-item-list d-flex flex-column">
+                     <div class="changelog-detail-item d-flex flex-column">
+                        <div class="changelog-detail-item-thumb rounded-1 overflow-hidden">
+                           <img src="assets/img/changelog-detail-thumb-1.jpg" alt="changelog detail thumb" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="changelog-detail-item-content text-black">
+                           <h2 class="fw-semibold mb-3">Headline H2</h2>
+                           <p>We’re thrilled to announce two enhancements to improve the LaunchNotes-HubSpot integration and and a fix to the embeddable widget - to streamline your product updates processes and deliver a better experience.</p>
+                           <p class="mb-0">Sed et tristique dolor. Donec venenatis laoreet enim vitae ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris sit amet neque at diam consectetur eleifend id at urna. Ut dictum scelerisque diam, ut lacinia nunc interdum interdum. Fusce mollis sapien in eros ornare, in luctus ligula lobortis. Sed nec pulvinar odio. Aenean non finibus ligula. Fusce nisl velit, venenatis nec metus nec, ultrices tincidunt sem. Duis congue elit nisi, in efficitur ex posuere tincidunt. Praesent eget vestibulum dui, at congue nibh. Pellentesque ut metus vitae ante ultricies imperdiet. Vestibulum lobortis ullamcorper fermentum. Proin feugiat sapien vel ultrices dictum. Etiam vehicula consectetur ex, non pellentesque leo tristique non.</p>
+                        </div>
+                     </div>
+                     <div class="changelog-detail-item d-flex flex-column">
+                        <div class="changelog-detail-item-thumb overflow-hidden">
+                           <img src="assets/img/changelog-detail-thumb-2.jpg" alt="changelog detail thumb" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="changelog-detail-item-content text-black">
+                           <h3 class="fw-semibold mb-3">Headline H3 - COMING SOON: Customizable “reply-to field” for sending product updates through HubSpot</h3>
+                           <p>With a planned delivery next week, LaunchNotes projects using HubSpot will be able to choose a different reply-to address for your LaunchNotes notification emails in HubSpot, giving you more flexibility and control over how replies are managed.</p>
+                           <div>
+                              <p>What’s New:</p>
+                              <ul class="mb-3">
+                                 <li>Add a reply-to address that’s separate from the sending address.</li>
+                                 <li>Improved customer experience with replies direct to the appropriate team.</li>
+                                 <li>Improved management of email response flows.</li>
+                                 <li>Get immediate visual feedback for your embedded content.</li>
+                              </ul>
+                           </div>
+                           <p>We’ve refined the HubSpot subscriber confirmation workflow to ensure a smoother experience for both new and existing subscribers.</p>
+                           <p class="mb-0">New subscribers are immediately confirmed, and for new and returning subscribers a confirmation email is now sent via HubSpot. A clear "Check your inbox" page and a direct link to "Manage Subscription" for easy access.</p>
+                        </div>
+                     </div>
+                     <div class="changelog-detail-item style-2 d-flex flex-column-reverse flex-md-row align-items-start">
+                        <div class="changelog-detail-item-content text-black">
+                           <h3 class="fw-semibold mb-3">Headline H3 - COMING SOON: Customizable “reply-to field” for sending product updates through HubSpot</h3>
+                           <p>With a planned delivery next week, LaunchNotes projects using HubSpot will be able to choose a different reply-to address for your LaunchNotes notification emails in HubSpot, giving you more flexibility and control over how replies are managed.</p>
+                           <div>
+                              <p>What’s New:</p>
+                              <ul>
+                                 <li>Add a reply-to address that’s separate from the sending address.</li>
+                                 <li>Improved customer experience with replies direct to the appropriate team.</li>
+                                 <li>Improved management of email response flows.</li>
+                                 <li>Get immediate visual feedback for your embedded content.</li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="changelog-detail-item-thumb rounded-1 overflow-hidden">
+                           <img src="assets/img/changelog-detail-thumb-3.jpg" alt="changelog detail thumb" class="w-100 h-100 object-fit-cover">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tags mb-5">
+                     <h6 class="fw-semibold">Tags</h6>
+                     <div class="tags-wrapper d-flex flex-wrap">
+                        <span class="tag d-inline-block rounded-pill fw-semibold">Tag Name will display here</span>
+                        <span class="tag d-inline-block rounded-pill fw-semibold">Moderation</span>
+                        <span class="tag d-inline-block rounded-pill fw-semibold">Authenticating</span>
+                        <span class="tag d-inline-block rounded-pill fw-semibold">Feedback</span>
+                        <span class="tag d-inline-block rounded-pill fw-semibold">Review</span>
+                        <span class="tag d-inline-block rounded-pill fw-semibold">Approval</span>
+                        <span class="tag d-inline-block rounded-pill fw-semibold">Escalation</span>
+                        <span class="tag d-inline-block rounded-pill fw-semibold">Escalation</span>
+                        <span class="tag d-inline-block rounded-pill fw-semibold">Escalation</span>
+                        <span class="tag d-inline-block rounded-pill fw-semibold">Tag Name will display here</span>
+                        <span class="tag d-inline-block rounded-pill fw-semibold">Moderation</span>
+                     </div>
+                  </div>
+                  <div class="reaction-list d-flex flex-column gap-4">
+                     <div class="reaction-item d-flex align-items-center justify-content-center rounded-3">
+                        <button type="button" class="reaction-btn bg-transparent border-0"><img src="assets/img/icon/emoji-1.svg" alt="emoji-1"></button>
+                        <button type="button" class="reaction-btn bg-transparent border-0"><img src="assets/img/icon/emoji-2.svg" alt="emoji-1"></button>
+                        <button type="button" class="reaction-btn bg-transparent border-0"><img src="assets/img/icon/emoji-3.svg" alt="emoji-1"></button>
+                        <button type="button" class="reaction-btn bg-transparent border-0"><img src="assets/img/icon/emoji-4.svg" alt="emoji-1"></button>
+                        <button type="button" class="reaction-btn bg-transparent border-0"><img src="assets/img/icon/emoji-5.svg" alt="emoji-1"></button>
+                     </div>
+                     <div class="reaction-item d-flex align-items-center justify-content-center rounded-3 gap-4">
+                        <button type="button" class="reaction-btn bg-transparent border-0 text-black d-flex flex-column align-items-center gap-3 fs-6">
+                           <img src="assets/img/icon/emoji-6.svg" alt="emoji-6"> Excellent </button>
+                        <button type="button" class="reaction-btn bg-transparent border-0 text-black d-flex flex-column align-items-center gap-3 fs-6">
+                           <img src="assets/img/icon/emoji-7.svg" alt="emoji-6"> Average </button>
+                        <button type="button" class="reaction-btn bg-transparent border-0 text-black d-flex flex-column align-items-center gap-3 fs-6">
+                           <img src="assets/img/icon/emoji-6.svg" alt="emoji-6"> Bad </button>
+                     </div>
+                     <div class="reaction-item d-flex align-items-center justify-content-center rounded-3">
+                        <button type="button" class="reaction-btn bg-transparent border-0 text-black d-flex flex-column align-items-center justify-content-between gap-3 fs-6"><img src="assets/img/icon/emoji-1.svg" alt="emoji"> Excellent </button>
+                        <button type="button" class="reaction-btn bg-transparent border-0 text-black d-flex flex-column align-items-center justify-content-between gap-3 fs-6"><img src="assets/img/icon/emoji-2.svg" alt="emoji"> Good </button>
+                        <button type="button" class="reaction-btn bg-transparent border-0 text-black d-flex flex-column align-items-center justify-content-between gap-3 fs-6"><img src="assets/img/icon/emoji-3.svg" alt="emoji"> Average </button>
+                        <button type="button" class="reaction-btn bg-transparent border-0 text-black d-flex flex-column align-items-center justify-content-between gap-3 fs-6"><img src="assets/img/icon/emoji-4.svg" alt="emoji"> Poor </button>
+                        <button type="button" class="reaction-btn bg-transparent border-0 text-black d-flex flex-column align-items-center justify-content-between gap-3 fs-6"><img src="assets/img/icon/emoji-5.svg" alt="emoji"> Bad </button>
+                     </div>
+                     <div class="reaction-item d-flex align-items-center justify-content-center flex-wrap rounded-3">
+                        <button type="button" class="reaction-btn rating-btn bg-transparent border-0 text-black d-flex flex-column align-items-center justify-content-between gap-3 fs-6">
+                           <div class="stars d-flex align-items-center gap-2">
+                              <img src="assets/img/icon/star-1.svg" alt="star">
+                              <img src="assets/img/icon/star-1.svg" alt="star">
+                              <img src="assets/img/icon/star-1.svg" alt="star">
+                              <img src="assets/img/icon/star-1.svg" alt="star">
+                              <img src="assets/img/icon/star-1.svg" alt="star">
+                           </div> Excellent
+                        </button>
+                        <button type="button" class="reaction-btn rating-btn bg-transparent border-0 text-black d-flex flex-column align-items-center justify-content-between gap-3 fs-6">
+                           <div class="stars d-flex align-items-center gap-2">
+                              <img src="assets/img/icon/star-2.svg" alt="star">
+                              <img src="assets/img/icon/star-2.svg" alt="star">
+                              <img src="assets/img/icon/star-2.svg" alt="star">
+                              <img src="assets/img/icon/star-2.svg" alt="star">
+                           </div> Good
+                        </button>
+                        <button type="button" class="reaction-btn rating-btn bg-transparent border-0 text-black d-flex flex-column align-items-center justify-content-between gap-3 fs-6">
+                           <div class="stars d-flex align-items-center gap-2">
+                              <img src="assets/img/icon/star-3.svg" alt="star">
+                              <img src="assets/img/icon/star-3.svg" alt="star">
+                              <img src="assets/img/icon/star-3.svg" alt="star">
+                           </div> Average
+                        </button>
+                        <button type="button" class="reaction-btn rating-btn bg-transparent border-0 text-black d-flex flex-column align-items-center justify-content-between gap-3 fs-6">
+                           <div class="stars d-flex align-items-center gap-2">
+                              <img src="assets/img/icon/star-4.svg" alt="star">
+                              <img src="assets/img/icon/star-4.svg" alt="star">
+                           </div> Poor
+                        </button>
+                        <button type="button" class="reaction-btn rating-btn bg-transparent border-0 text-black d-flex flex-column align-items-center justify-content-between gap-3 fs-6">
+                           <img src="assets/img/icon/star-5.svg" alt="star"> Bad </button>
+                     </div>
+                     <div class="reaction-item d-flex align-items-center justify-content-center flex-wrap rounded-3">
+                        <button type="button" class="reaction-btn rating-btn bg-transparent border-0 text-black d-flex flex-column align-items-center justify-content-between gap-3 fs-6">
+                           <div class="stars d-flex align-items-center gap-2">
+                              <img src="assets/img/icon/star-1.svg" alt="star">
+                              <img src="assets/img/icon/star-1.svg" alt="star">
+                              <img src="assets/img/icon/star-1.svg" alt="star">
+                              <img src="assets/img/icon/star-1.svg" alt="star">
+                              <img src="assets/img/icon/star-1.svg" alt="star">
+                           </div> Excellent
+                        </button>
+                        <button type="button" class="reaction-btn rating-btn bg-transparent border-0 text-black d-flex flex-column align-items-center justify-content-between gap-3 fs-6">
+                           <div class="stars d-flex align-items-center gap-2">
+                              <img src="assets/img/icon/star-2.svg" alt="star">
+                              <img src="assets/img/icon/star-2.svg" alt="star">
+                              <img src="assets/img/icon/star-2.svg" alt="star">
+                              <img src="assets/img/icon/star-2.svg" alt="star">
+                           </div> Good
+                        </button>
+                        <button type="button" class="reaction-btn rating-btn bg-transparent border-0 text-black d-flex flex-column align-items-center justify-content-between gap-3 fs-6">
+                           <div class="stars d-flex align-items-center gap-2">
+                              <img src="assets/img/icon/star-3.svg" alt="star">
+                              <img src="assets/img/icon/star-3.svg" alt="star">
+                              <img src="assets/img/icon/star-3.svg" alt="star">
+                           </div> Average
+                        </button>
+                        <button type="button" class="reaction-btn rating-btn bg-transparent border-0 text-black d-flex flex-column align-items-center justify-content-between gap-3 fs-6">
+                           <div class="stars d-flex align-items-center gap-2">
+                              <img src="assets/img/icon/star-4.svg" alt="star">
+                              <img src="assets/img/icon/star-4.svg" alt="star">
+                           </div> Poor
+                        </button>
+                        <button type="button" class="reaction-btn rating-btn bg-transparent border-0 text-black d-flex flex-column align-items-center justify-content-between gap-3 fs-6">
+                           <img src="assets/img/icon/star-5.svg" alt="star"> Bad </button>
+                     </div>
+                     <div class="reaction-item d-flex align-items-center justify-content-between flex-wrap rounded-3">
+                        <div>
+                           <h6 class="fw-semibold mb-2">Was this article helpful?</h6>
+                           <p class="mb-0">0 out of 0 found this helpful</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                           <button type="button" class="like-btn d-flex align-items-center justify-content-center rounded"><img src="assets/img/icon/thumbs-up.svg" alt="thumbs-up"></button>
+                           <button type="button" class="like-btn d-flex align-items-center justify-content-center rounded"><img src="assets/img/icon/thumbs-down.svg" alt="thumbs-down"></button>
+                        </div>
+                     </div>
+                     <div class="reaction-item d-flex align-items-center justify-content-between flex-wrap rounded-3">
+                        <div>
+                           <h6 class="fw-semibold mb-2">Was this article helpful?</h6>
+                           <p class="mb-0">0 out of 0 found this helpful</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                           <button type="button" class="theme-btn secondary rounded fw-semibold">Yes</button>
+                           <button type="button" class="theme-btn secondary rounded fw-semibold">No</button>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <!-- changelog details section end -->
+            </div>
+         </div>
+         <!-- main content end -->
+      </div>
+   </main>
+   <!-- footer section start -->
+   <footer class="footer">
+      <p class="copyright-text text-center mb-0 fw-semibold">© 2025 InsightHQ. All rights reserved</p>
+   </footer>
+   <!-- footer section end -->
+   <!-- Optional JavaScript; choose one of the two! -->
+   <script src="assets/js/jquery-3.7.1.min.js"></script>
+   <script src="assets/js/popper.min.js"></script>
+   <script src="assets/js/bootstrap.min.js"></script>
+   <script src="assets/js/select2.min.js"></script>
+   <script src="assets/js/spectrum.min.js"></script>
+   <script src="assets/js/main.js"></script>
+</body>
+
+</html>

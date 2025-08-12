@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- favicon -->
+   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+   <link rel="icon" sizes="32x32" href="assets/img/favicon/favicon-32x32.png" type="image/png">
+   <link rel="icon" sizes="16x16" href="assets/img/favicon/favicon-16x16.png" type="image/png">
+   <link rel="shortcut icon" href="assets/img/favicon/favicon.ico" type="image/x-icon">
+   <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+   <link rel="stylesheet" href="assets/css/select2.min.css">
+   <link rel="stylesheet" href="assets/css/spectrum.min.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/responsive.css">
+   <title>Add Article</title>
+</head>
+
+<body>
+   <!-- header section start -->
+   <header class="header sticky-top py-3">
+      <div class="header-wrapper d-flex align-items-center justify-content-between gap-4">
+         <h4 class="header-title fw-semibold mb-0">New Articles</h4>
+         <a href="#" class="widget-item-btn d-inline-block rounded fw-semibold">Close</a>
+      </div>
+   </header>
+   <!-- header section end -->
+   <main>
+      <!-- main content start -->
+      <div class="main-content">
+         <div class="main-content-wrapper">
+            <form action="#" class="add-changelog-form form mx-auto">
+               <div class="upload-input">
+                  <input type="file" class="visually-hidden" id="feature-banner">
+                  <label for="feature-banner" class="d-block text-center rounded-3">
+                     <span class="upload-btn widget-item-btn d-inline-block rounded fw-semibold mb-2">Upload Features Banner</span>
+                     <span class="upload-input-text d-block">Recommended size 600 / 400 Size</span>
+                  </label>
+               </div>
+               <div class="form-input-wrapper d-flex flex-column gap-4 my-4 pt-1 pb-3">
+                  <div class="form-input">
+                     <label for="article-title" class="input-label mb-1 fw-medium">Full Article Title</label>
+                     <input type="text" id="article-title" class="input-field w-100 rounded" placeholder="Your first name">
+                  </div>
+                  <div class="form-acton-btns d-flex gap-4 row-gap-3 flex-wrap">
+                     <a href="#" class="form-action-btn d-inline-block text-decoration-underline">Add Short Title</a>
+                     <a href="#" class="form-action-btn d-inline-block text-decoration-underline">Add Internal Title</a>
+                     <a href="#" class="form-action-btn d-inline-block text-decoration-underline">Add Internal Notes</a>
+                  </div>
+                  <div class="form-input">
+                     <label for="changelog-desc" class="input-label mb-1 fw-medium">Changelog / Announcement</label>
+                     <textarea id="changelog-desc" class="input-field changelog-textarea w-100 rounded"></textarea>
+                  </div>
+                  <div class="form-widget rounded p-3 p-md-4 d-flex flex-column">
+                     <h6 class="form-widget-title fw-normal mb-0">Publishing meta data</h6>
+                     <div class="form-input">
+                        <label for="author" class="input-label mb-1 fw-medium">Author</label>
+                        <select id="author" class="input-field w-100 rounded bg-white">
+                           <option value="select">Selected value</option>
+                           <option value="select">Selected value</option>
+                           <option value="select">Selected value</option>
+                           <option value="select">Selected value</option>
+                           <option value="select">Selected value</option>
+                        </select>
+                     </div>
+                     <div class="form-input">
+                        <label for="category" class="input-label mb-1 fw-medium">Category</label>
+                        <select id="category" class="input-field w-100 rounded bg-white">
+                           <option value="select">Selected value</option>
+                           <option value="select">Selected value</option>
+                           <option value="select">Selected value</option>
+                           <option value="select">Selected value</option>
+                           <option value="select">Selected value</option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="form-widget rounded p-3 p-md-4 d-flex flex-column">
+                     <h6 class="form-widget-title fw-normal mb-0">SEO & Others</h6>
+                     <div class="form-input">
+                        <label for="tag" class="input-label mb-1 fw-medium">Tags</label>
+                        <select id="tag" class="category-select input-field w-100 rounded bg-white" multiple="multiple">
+                           <option value="New Features" selected>New Features</option>
+                           <option value="Bugs" selected>Bugs</option>
+                           <option value="New Features">New Features</option>
+                           <option value="Bugs">Bugs</option>
+                        </select>
+                     </div>
+                     <div class="form-input">
+                        <label for="search-phase" class="input-label mb-1 fw-medium">Search Phrases</label>
+                        <select id="search-phase" class="category-select input-field w-100 rounded bg-white" multiple="multiple">
+                           <option value="New Features" selected>New Features</option>
+                           <option value="Bugs" selected>Bugs</option>
+                           <option value="New Features">New Features</option>
+                           <option value="Bugs">Bugs</option>
+                        </select>
+                     </div>
+                     <div class="form-input">
+                        <label for="title-tag" class="input-label mb-1 fw-medium">Title Tag</label>
+                        <input type="text" id="title-tag" class="input-field w-100 rounded" placeholder="Your first name">
+                        <p class="form-input-desc mt-1 mb-0">Defaults to "Article Title | KB Name”, the title tag is an accurate and concise description of the article that is important for SEO and social sharing.Recommended length is between 50-70 characters as longer titles may be truncated.</p>
+                     </div>
+                     <div class="form-input">
+                        <label for="meta-desc" class="input-label mb-1 fw-medium">Meta Description</label>
+                        <input type="text" id="meta-desc" class="input-field w-100 rounded" placeholder="Your first name">
+                        <p class="form-input-desc mt-1 mb-0">Commonly used by search engines as a text preview, the meta description briefly describes the contents of the article.Recommended length is between 150-160 characters as longer descriptions may be truncated.</p>
+                     </div>
+                  </div>
+                  <div class="form-widget rounded p-3 p-md-4 d-flex flex-column">
+                     <h6 class="form-widget-title fw-normal mb-0">Related articles</h6>
+                     <div class="form-input-wrapper d-flex flex-column flex-sm-row align-items-start align-items-sm-end mb-3">
+                        <div class="form-input w-100">
+                           <label for="select-article" class="input-label mb-1 fw-medium">Select articles</label>
+                           <select id="select-article" class="input-field w-100 rounded bg-white">
+                              <option value="select">Selected value</option>
+                              <option value="select">Selected value</option>
+                              <option value="select">Selected value</option>
+                              <option value="select">Selected value</option>
+                              <option value="select">Selected value</option>
+                           </select>
+                        </div>
+                        <button type="button" class="flex-shrink-0 theme-btn secondary rounded fw-semibold">Add articles</button>
+                     </div>
+                     <div class="article-table-container subscribe-list-table-container table-responsive">
+                        <table class="article-table subscribe-list-table w-100">
+                           <thead>
+                              <tr>
+                                 <th class="article-name fw-medium border-start-0">Articles</th>
+                                 <th class="action fw-medium border-start-0">Action</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td class="fw-medium">Where do Related Articles show up?</td>
+                                 <td class="fw-medium">Remove</td>
+                              </tr>
+                              <tr>
+                                 <td class="fw-medium">Where do Related Articles show up?</td>
+                                 <td class="fw-medium">Remove</td>
+                              </tr>
+                              <tr>
+                                 <td class="fw-medium">Where do Related Articles show up?</td>
+                                 <td class="fw-medium">Remove</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="form-input mt-3">
+                     <label for="status-of-article" class="input-label mb-1 fw-medium">Status of articles</label>
+                     <select id="status-of-article" class="input-field w-100 rounded bg-white">
+                        <option value="select">Selected value</option>
+                        <option value="selected value">Selected value</option>
+                        <option value="selected value">Selected value</option>
+                        <option value="selected value">Selected value</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="form-footer d-flex align-items-center flex-wrap">
+                  <button type="submit" class="form-btn theme-btn fw-semibold rounded border-0">Save & Published</button>
+                  <button type="submit" class="form-btn theme-btn fw-semibold rounded border-0">Save as draft</button>
+                  <button type="submit" class="form-btn theme-btn secondary fw-semibold rounded">Cancel</button>
+               </div>
+            </form>
+         </div>
+      </div>
+      <!-- main content end -->
+   </main>
+   <!-- footer section start -->
+   <footer class="footer">
+      <p class="copyright-text text-center mb-0 fw-semibold">© 2025 InsightHQ. All rights reserved</p>
+   </footer>
+   <!-- footer section end -->
+
+   <!-- Optional JavaScript; choose one of the two! -->
+   <script src="assets/js/jquery-3.7.1.min.js"></script>
+   <script src="assets/js/popper.min.js"></script>
+   <script src="assets/js/bootstrap.min.js"></script>
+   <script src="assets/js/select2.min.js"></script>
+   <script src="assets/js/spectrum.min.js"></script>
+   <script src="assets/js/main.js"></script>
+</body>
+
+</html>

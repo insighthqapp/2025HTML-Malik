@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog - Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <link href="css/customstyle.css" rel="stylesheet">
+</head>
+<body>
+    <div class="d-flex">
+        <div class="sidebar bg-dark text-white">
+            <div class="sidebar-header p-3">
+                <h4>Admin Panel</h4>
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link"><i class="bi bi-speedometer2"></i> Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="clients.html" class="nav-link"><i class="bi bi-people"></i> Clients</a>
+                </li>
+                <li class="nav-item">
+                    <a href="changelog.html" class="nav-link active"><i class="bi bi-clock-history"></i> Changelog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="articles.html" class="nav-link"><i class="bi bi-file-text"></i> Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a href="knowledge.html" class="nav-link"><i class="bi bi-book"></i> Knowledge Board</a>
+                </li>
+                <li class="nav-item">
+                    <a href="billing.html" class="nav-link"><i class="bi bi-credit-card"></i> Billing & Payments</a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link"><i class="bi bi-gear"></i> Settings</a>
+                </li>
+                <li class="nav-item mt-auto">
+                    <a href="index.html" class="nav-link"><i class="bi bi-box-arrow-left"></i> Logoff</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="container-fluid p-4">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2>Changelog</h2>
+                    <button class="btn btn-primary">
+                        <i class="bi bi-plus-circle me-2"></i>Add Change Log
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <table id="changelogTable" class="table table-striped" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Status</th>
+                                    <th>Change Log / Announcement</th>
+                                    <th>Public URL</th>
+                                    <th>Total View</th>
+                                    <th>Unique View</th>
+                                    <th>Client Domain</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#changelogTable').DataTable({
+                pageLength: 10,
+                order: [[0, 'desc']],
+                data: [
+                    ['CL001', '<span class="badge bg-success">Active</span>', 'New Feature: Enhanced Search Capabilities', 'https://changelog.domain.com/cl001', '1250', '856', 'example.com', '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['CL002', '<span class="badge bg-warning">Draft</span>', 'Upcoming UI Improvements', 'https://changelog.domain.com/cl002', '0', '0', 'example.com', '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['CL003', '<span class="badge bg-info">Scheduled</span>', 'System Maintenance Notice', 'https://changelog.domain.com/cl003', '0', '0', 'client2.com', '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['CL004', '<span class="badge bg-danger">Inactive</span>', 'Previous Update: Bug Fixes', 'https://changelog.domain.com/cl004', '2340', '1205', 'client3.com', '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['CL005', '<span class="badge bg-success">Active</span>', 'Security Updates Implementation', 'https://changelog.domain.com/cl005', '3150', '2180', 'example.com', '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['CL006', '<span class="badge bg-success">Active</span>', 'Performance Optimization Release', 'https://changelog.domain.com/cl006', '1890', '945', 'client4.com', '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['CL007', '<span class="badge bg-warning">Draft</span>', 'New Integration Features', 'https://changelog.domain.com/cl007', '0', '0', 'client5.com', '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['CL008', '<span class="badge bg-info">Scheduled</span>', 'Database Upgrade Notice', 'https://changelog.domain.com/cl008', '0', '0', 'example.com', '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['CL009', '<span class="badge bg-success">Active</span>', 'API Version 2.0 Release', 'https://changelog.domain.com/cl009', '2780', '1560', 'client6.com', '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['CL010', '<span class="badge bg-danger">Inactive</span>', 'Legacy Feature Deprecation', 'https://changelog.domain.com/cl010', '1670', '890', 'client7.com', '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>']
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

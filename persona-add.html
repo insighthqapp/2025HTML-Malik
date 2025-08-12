@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- favicon -->
+      <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+      <link rel="icon" sizes="32x32" href="assets/img/favicon/favicon-32x32.png" type="image/png">
+      <link rel="icon" sizes="16x16" href="assets/img/favicon/favicon-16x16.png" type="image/png">
+      <link rel="shortcut icon" href="assets/img/favicon/favicon.ico" type="image/x-icon">
+      <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+      <link rel="stylesheet" href="assets/css/select2.min.css">
+      <link rel="stylesheet" href="assets/css/spectrum.min.css">
+      <link rel="stylesheet" href="assets/css/daterangepicker.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/responsive.css">
+      <title>Create A New Persona</title>
+   </head>
+
+   <body>
+      <!-- header section start -->
+      <header class="header sticky-top py-3">
+         <div class="header-wrapper d-flex align-items-center justify-content-between gap-4">
+            <h4 class="header-title fw-semibold mb-0">Create a new persona</h4>
+            <a href="#" class="widget-item-btn d-inline-block rounded fw-semibold">Close</a>
+         </div>
+      </header>
+      <!-- header section end -->
+      <main>
+         <!-- main content start -->
+         <div class="main-content">
+            <div class="main-content-wrapper">
+               <form action="#" class="add-changelog-form form mx-auto">
+                  <div class="upload-input">
+                     <input type="file" class="visually-hidden" id="feature-banner">
+                     <label for="feature-banner" class="d-block text-center rounded-3">
+                        <span class="upload-btn widget-item-btn d-inline-block rounded fw-semibold mb-2">Upload Features Banner</span>
+                        <span class="upload-input-text d-block">Recommended size 600 / 400 Size</span>
+                     </label>
+                  </div>
+                  <div class="theme-accordion accordion d-flex flex-column mt-3 pt-1 mb-3" id="createPersonaAccordion">
+                     <div class="accordion-item">
+                        <h2 class="accordion-header">
+                           <button class="accordion-button fw-semibold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#basicInfo" aria-expanded="true" aria-controls="basicInfo"> Basic Information </button>
+                        </h2>
+                        <div id="basicInfo" class="accordion-collapse collapse show" data-bs-parent="#createPersonaAccordion">
+                           <div class="accordion-body">
+                              <div class="form-input-wrapper d-flex flex-column gap-4">
+                                 <div class="form-input">
+                                    <label for="persona-name" class="input-label mb-1 fw-medium">Persona Name</label>
+                                    <input type="text" id="persona-name" class="input-field w-100 rounded" placeholder="Your first name">
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="age" class="input-label mb-1 fw-medium">Age / Age Range</label>
+                                    <input type="text" id="age" class="input-field w-100 rounded" placeholder="Your first name">
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="gender" class="input-label mb-1 fw-medium">Gender</label>
+                                    <select id="gender" class="input-field w-100 rounded bg-white">
+                                       <option value="select">Selected value</option>
+                                       <option value="male">Male</option>
+                                       <option value="female">Female</option>
+                                       <option value="others">Others</option>
+                                    </select>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="location" class="input-label mb-1 fw-medium">Location / Region</label>
+                                    <input type="text" id="location" class="input-field w-100 rounded" placeholder="Your first name">
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="occupation" class="input-label mb-1 fw-medium">Occupation / Job Title</label>
+                                    <input type="text" id="occupation" class="input-field w-100 rounded" placeholder="Your first name">
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="industry" class="input-label mb-1 fw-medium">Industry</label>
+                                    <select id="industry" class="category-select input-field w-100 rounded bg-white" multiple="multiple">
+                                       <option value="New Features" selected>New Features</option>
+                                       <option value="Bugs" selected>Bugs</option>
+                                       <option value="New Features">New Features</option>
+                                       <option value="Bugs">Bugs</option>
+                                    </select>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="education-level" class="input-label mb-1 fw-medium">Education Level</label>
+                                    <select id="education-level" class="category-select input-field w-100 rounded bg-white" multiple="multiple">
+                                       <option value="New Features" selected>New Features</option>
+                                       <option value="Bugs" selected>Bugs</option>
+                                       <option value="New Features">New Features</option>
+                                       <option value="Bugs">Bugs</option>
+                                    </select>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="income-range" class="input-label mb-1 fw-medium">Income Range</label>
+                                    <select id="income-range" class="category-select input-field w-100 rounded bg-white" multiple="multiple">
+                                       <option value="New Features" selected>New Features</option>
+                                       <option value="Bugs" selected>Bugs</option>
+                                       <option value="New Features">New Features</option>
+                                       <option value="Bugs">Bugs</option>
+                                    </select>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <h2 class="accordion-header">
+                           <button class="accordion-button fw-semibold shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#demographics" aria-expanded="false" aria-controls="demographics"> Demographics & Background </button>
+                        </h2>
+                        <div id="demographics" class="accordion-collapse collapse" data-bs-parent="#createPersonaAccordion">
+                           <div class="accordion-body">
+                              <div class="form-input-wrapper d-flex flex-column gap-4">
+                                 <div class="form-input">
+                                    <label for="merital-status" class="input-label mb-1 fw-medium d-block">Marital Status</label>
+                                    <select id="merital-status" class="input-field w-100 rounded bg-white">
+                                       <option value="select">Selected value</option>
+                                       <option value="marred">Marred</option>
+                                       <option value="unmarred">Unmarred</option>
+                                    </select>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="family-status" class="input-label mb-1 fw-medium d-block">Family Status</label>
+                                    <select id="family-status" class="input-field w-100 rounded bg-white">
+                                       <option value="select">Selected value</option>
+                                       <option value="marred">Marred</option>
+                                       <option value="unmarred">Unmarred</option>
+                                    </select>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="cultural-background" class="input-label mb-1 fw-medium">Cultural Background</label>
+                                    <textarea type="text" id="cultural-background" class="input-field w-100 rounded" placeholder="Placeholder"></textarea>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="language" class="input-label mb-1 fw-medium">Language(s) Spoken</label>
+                                    <select id="language" class="category-select input-field w-100 rounded bg-white" multiple="multiple">
+                                       <option value="New Features" selected>New Features</option>
+                                       <option value="Bugs" selected>Bugs</option>
+                                       <option value="New Features">New Features</option>
+                                       <option value="Bugs">Bugs</option>
+                                    </select>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="occupation2" class="input-label mb-1 fw-medium">Occupation / Job Title</label>
+                                    <input type="text" id="occupation2" class="input-field w-100 rounded" placeholder="Your first name">
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="tech-savviness" class="input-label mb-1 fw-medium">Tech Savviness / Device Usage</label>
+                                    <select id="tech-savviness" class="category-select input-field w-100 rounded bg-white" multiple="multiple">
+                                       <option value="New Features" selected>New Features</option>
+                                       <option value="Bugs" selected>Bugs</option>
+                                       <option value="New Features">New Features</option>
+                                       <option value="Bugs">Bugs</option>
+                                    </select>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="work-experience-level" class="input-label mb-1 fw-medium">Work Experience Level</label>
+                                    <select id="work-experience-level" class="category-select input-field w-100 rounded bg-white" multiple="multiple">
+                                       <option value="New Features" selected>New Features</option>
+                                       <option value="Bugs" selected>Bugs</option>
+                                       <option value="New Features">New Features</option>
+                                       <option value="Bugs">Bugs</option>
+                                    </select>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <h2 class="accordion-header">
+                           <button class="accordion-button fw-semibold shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#psychographics" aria-expanded="false" aria-controls="psychographics">Psychographics</button>
+                        </h2>
+                        <div id="psychographics" class="accordion-collapse collapse" data-bs-parent="#createPersonaAccordion">
+                           <div class="accordion-body">
+                              <div class="form-input-wrapper d-flex flex-column gap-4">
+                                 <div class="form-input">
+                                    <label for="goals" class="input-label mb-1 fw-medium">Goals</label>
+                                    <textarea id="goals" class="input-field w-100 rounded" placeholder="Placeholder"></textarea>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="frustrations" class="input-label mb-1 fw-medium">Frustrations / Pain Points</label>
+                                    <textarea id="frustrations" class="input-field w-100 rounded" placeholder="Placeholder"></textarea>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="values" class="input-label mb-1 fw-medium">Values & Beliefs</label>
+                                    <textarea id="values" class="input-field w-100 rounded" placeholder="Placeholder"></textarea>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="motivations" class="input-label mb-1 fw-medium">Motivations / Drivers</label>
+                                    <textarea id="motivations" class="input-field w-100 rounded" placeholder="Placeholder"></textarea>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="personality-type" class="input-label mb-1 fw-medium">Personality Type (Optional: MBTI or Big 5)</label>
+                                    <select id="personality-type" class="category-select input-field w-100 rounded bg-white" multiple="multiple">
+                                       <option value="New Features" selected>New Features</option>
+                                       <option value="Bugs" selected>Bugs</option>
+                                       <option value="New Features">New Features</option>
+                                       <option value="Bugs">Bugs</option>
+                                    </select>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="communication-style" class="input-label mb-1 fw-medium">Preferred Communication Style</label>
+                                    <input type="text" id="communication-style" class="input-field w-100 rounded" placeholder="Your first name">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <h2 class="accordion-header">
+                           <button class="accordion-button fw-semibold shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#behavioral-insights" aria-expanded="false" aria-controls="behavioral-insights">Behavioral Insights</button>
+                        </h2>
+                        <div id="behavioral-insights" class="accordion-collapse collapse" data-bs-parent="#createPersonaAccordion">
+                           <div class="accordion-body">
+                              <div class="form-input-wrapper d-flex flex-column gap-4">
+                                 <div class="form-input">
+                                    <label for="daily-routine" class="input-label mb-1 fw-medium">Daily Routine / Habits</label>
+                                    <textarea id="daily-routine" class="input-field w-100 rounded" placeholder="Placeholder"></textarea>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="shopping-preferences" class="input-label mb-1 fw-medium">Shopping Preferences</label>
+                                    <textarea id="shopping-preferences" class="input-field w-100 rounded" placeholder="Placeholder"></textarea>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="media-consumption" class="input-label mb-1 fw-medium">Media Consumption</label>
+                                    <select id="media-consumption" class="category-select input-field w-100 rounded bg-white" multiple="multiple">
+                                       <option value="New Features" selected>New Features</option>
+                                       <option value="Bugs" selected>Bugs</option>
+                                       <option value="New Features">New Features</option>
+                                       <option value="Bugs">Bugs</option>
+                                    </select>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="product-usage" class="input-label mb-1 fw-medium">Product Usage Behavior</label>
+                                    <textarea id="product-usage" class="input-field w-100 rounded" placeholder="Placeholder"></textarea>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="decision-making-style" class="input-label mb-1 fw-medium">Decision-Making Style</label>
+                                    <textarea id="decision-making-style" class="input-field w-100 rounded" placeholder="Placeholder"></textarea>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="online-activity" class="input-label mb-1 fw-medium d-block">Online Activity Level</label>
+                                    <select id="online-activity" class="input-field w-100 rounded bg-white">
+                                       <option value="select">Selected value</option>
+                                       <option value="marred">Marred</option>
+                                       <option value="unmarred">Unmarred</option>
+                                    </select>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <h2 class="accordion-header">
+                           <button class="accordion-button fw-semibold shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#journeyContext" aria-expanded="false" aria-controls="journeyContext">Journey Context</button>
+                        </h2>
+                        <div id="journeyContext" class="accordion-collapse collapse" data-bs-parent="#createPersonaAccordion">
+                           <div class="accordion-body">
+                              <div class="form-input-wrapper d-flex flex-column gap-4">
+                                 <div class="form-input">
+                                    <label for="needs" class="input-label mb-1 fw-medium">Needs/Challenges related to your product</label>
+                                    <textarea id="needs" class="input-field w-100 rounded" placeholder="Placeholder"></textarea>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="stage-in-journey" class="input-label mb-1 fw-medium">Stage in Journey</label>
+                                    <select id="stage-in-journey" class="category-select input-field w-100 rounded bg-white" multiple="multiple">
+                                       <option value="New Features" selected>New Features</option>
+                                       <option value="Bugs" selected>Bugs</option>
+                                       <option value="New Features">New Features</option>
+                                       <option value="Bugs">Bugs</option>
+                                    </select>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="preferred-channels" class="input-label mb-1 fw-medium">Preferred Channels</label>
+                                    <select id="preferred-channels" class="category-select input-field w-100 rounded bg-white" multiple="multiple">
+                                       <option value="New Features" selected>New Features</option>
+                                       <option value="Bugs" selected>Bugs</option>
+                                       <option value="New Features">New Features</option>
+                                       <option value="Bugs">Bugs</option>
+                                    </select>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="touchpoints" class="input-label mb-1 fw-medium">Touchpoints Used</label>
+                                    <textarea id="touchpoints" class="input-field w-100 rounded" placeholder="Placeholder"></textarea>
+                                 </div>
+                                 <div class="form-input">
+                                    <label for="key-influencers" class="input-label mb-1 fw-medium">Key Influencers or Sources of Trust</label>
+                                    <textarea id="key-influencers" class="input-field w-100 rounded" placeholder="Placeholder"></textarea>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-footer d-flex align-items-center flex-wrap">
+                     <button type="submit" class="form-btn theme-btn fw-semibold rounded border-0">Save & Published</button>
+                     <button type="submit" class="form-btn theme-btn fw-semibold rounded border-0">Save as draft</button>
+                     <button type="submit" class="form-btn theme-btn secondary fw-semibold rounded">Cancel</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+         <!-- main content end -->
+      </main>
+      <!-- footer section start -->
+      <footer class="footer">
+         <p class="copyright-text text-center mb-0 fw-semibold">© 2025 InsightHQ. All rights reserved</p>
+      </footer>
+      <!-- footer section end -->
+      <!-- Optional JavaScript; choose one of the two! -->
+      <script src="assets/js/jquery-3.7.1.min.js"></script>
+      <script src="assets/js/popper.min.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="assets/js/select2.min.js"></script>
+      <script src="assets/js/spectrum.min.js"></script>
+      <script src="assets/js/moment.min.js"></script>
+      <script src="assets/js/daterangepicker.js"></script>
+      <script src="assets/js/main.js"></script>
+   </body>
+
+</html>

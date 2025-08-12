@@ -1,0 +1,124 @@
+/* Custom styles for the admin panel */
+.card {
+    border-radius: 10px;
+    border: none;
+}
+
+.card-body {
+    border-radius: 10px;
+}
+
+.btn-primary {
+    padding: 10px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.form-control {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+
+/* Custom colors and hover states can be added here */
+
+
+/* Dashboard Layout Styles */
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.sidebar-header {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.8);
+    padding: 0.8rem 1rem;
+}
+
+.nav-link:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+}
+
+.nav-link.active {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+.nav-link i {
+    margin-right: 10px;
+}
+
+.content-wrapper {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    background: #f8f9fa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+    .content-wrapper {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+}
+
+
+/* Add these styles to your existing customstyle.css */
+
+/* NSP Score icons */
+.bi-emoji-smile-fill {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+.bi-emoji-neutral-fill {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+.bi-emoji-frown-fill {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+/* Table cell alignment for numbers */
+.table td:nth-child(5),
+.table td:nth-child(6),
+.table td:nth-child(8) {
+    text-align: right;
+}
+
+/* Status badge colors */
+.badge.bg-warning {
+    background-color: #ffc107 !important;
+    color: #000;
+}
+
+.badge.bg-info {
+    background-color: #0dcaf0 !important;
+    color: #000;
+}
+
+/* URL style */
+table td a.url-link {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+table td a.url-link:hover {
+    text-decoration: underline;
+}

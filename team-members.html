@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- favicon -->
+   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+   <link rel="icon" sizes="32x32" href="assets/img/favicon/favicon-32x32.png" type="image/png">
+   <link rel="icon" sizes="16x16" href="assets/img/favicon/favicon-16x16.png" type="image/png">
+   <link rel="shortcut icon" href="assets/img/favicon/favicon.ico" type="image/x-icon">
+   <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+   <link rel="stylesheet" href="assets/css/select2.min.css">
+   <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.bootstrap5.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/responsive.css">
+   <title>Setting - Team Member</title>
+</head>
+
+<body>
+   <!-- header section start -->
+   <header class="header sticky-top">
+      <div class="header-wrapper d-flex align-items-center justify-content-between gap-4">
+         <div class="header-left d-flex align-items-center gap-3">
+            <button type="button" title="close sidebar" class="sidebar-toggle bg-transparent border-0 fs-5 d-xl-none"><i class="fa-regular fa-bars"></i></button>
+            <a href="#" class="header-logo logo d-inline-block"><img src="assets/img/logo.svg" alt="logo"></a>
+         </div>
+         <div class="profile-container d-flex align-items-center justify-content-end pb-0">
+            <div class="profile d-flex align-items-center gap-2 gap-sm-3">
+               <img src="assets/img/profile-img.png" alt="profile-img" class="profile-img rounded-circle object-fit-cover">
+               <div class="profile-wrapper d-flex align-items-end gap-2">
+                  <div class="profile-info">
+                     <span class="d-block">Welcome</span>
+                     <h6 class="fw-semibold mb-0">Clarence D. Shock</h6>
+                  </div>
+                  <div class="header-dropdown dropdown">
+                     <button type="button" title="action" data-bs-toggle="dropdown" aria-expanded="false" class="header-dropdown-toggle dropdown-toggle d-inline-flex bg-transparent border-0"><i class="fa-solid fa-caret-down"></i></button>
+                     <ul class="dropdown-menu rounded-0 border-top-0 border-bottom-0">
+                        <li><a class="dropdown-item" href="#">Update Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Change Password</a></li>
+                        <li><a class="dropdown-item" href="#">Logoff</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <button type="button" title="sign out" data-bs-toggle="tooltip" data-bs-title="Log out" class="logout-btn d-flex align-items-center justify-content-center bg-transparent border-0"><i class="fa-regular fa-arrow-right-from-bracket"></i></button>
+
+         </div>
+      </div>
+   </header>
+   <!-- header section end -->
+   <main>
+      <div class="main-container d-flex position-relative">
+         <!-- sidebar start -->
+         <aside class="sidebar sticky-top overflow-auto bg-white flex-shrink-0">
+            <div class="sidebar-header sticky-top text-end d-xl-none p-3">
+               <button type="button" title="close sidebar" class="sidebar-toggle bg-transparent border-0 fs-5"><i class="fa-regular fa-xmark"></i></button>
+            </div>
+            <div class="sidebar-menu d-flex flex-column">
+               <div class="sidebar-menu-block">
+                  <h6 class="sidebar-menu-title fw-semibold text-uppercase"><a href="#">back to app</a></h6>
+                  <ul class="sidebar-menu-list">
+                     <li class="sidebar-menu-item">
+                        <a href="team-members.html" class="sidebar-menu-link d-flex align-items-center active">
+                           <span class="sidebar-menu-link-text">Team member</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="pricing.html" class="sidebar-menu-link d-flex align-items-center">
+                           <span class="sidebar-menu-link-text">Pricing</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="sidebar-menu-block">
+                  <h6 class="sidebar-menu-title fw-semibold text-uppercase">Branding & Customizations</h6>
+                  <ul class="sidebar-menu-list">
+                     <li class="sidebar-menu-item">
+                        <a href="branding.html" class="sidebar-menu-link d-flex align-items-center">
+                           <span class="sidebar-menu-link-text">Branding</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <span class="sidebar-menu-link-text">View Your Website</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="widget.html" class="sidebar-menu-link d-flex align-items-center">
+                           <span class="sidebar-menu-link-text">Your Widget</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="sidebar-menu-block">
+                  <h6 class="sidebar-menu-title fw-semibold text-uppercase">Modules</h6>
+                  <ul class="sidebar-menu-list">
+                     <li class="sidebar-menu-item">
+                        <a href="changelog-settings.html" class="sidebar-menu-link d-flex align-items-center">
+                           <span class="sidebar-menu-link-text">Change log / Announcement</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="help-center.html" class="sidebar-menu-link d-flex align-items-center">
+                           <span class="sidebar-menu-link-text">Knowledge board</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <span class="sidebar-menu-link-text">Feedback</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <span class="sidebar-menu-link-text">Survey</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <span class="sidebar-menu-link-text">Research Board</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="sidebar-menu-block">
+                  <h6 class="sidebar-menu-title fw-semibold text-uppercase">Others</h6>
+                  <ul class="sidebar-menu-list">
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <span class="sidebar-menu-link-text">App Settings</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <span class="sidebar-menu-link-text">View Your Website</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="widget.html" class="sidebar-menu-link d-flex align-items-center">
+                           <span class="sidebar-menu-link-text">Your Widget</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </aside>
+         <!-- sidebar overlay -->
+         <div class="sidebar-overlay fixed-top w-100 h-100 d-xl-none"></div>
+         <!-- sidebar end -->
+         <!-- main content start -->
+         <div class="main-content flex-grow-1 overflow-auto">
+            <div class="main-content-wrapper">
+               <!-- breadcrumbs start -->
+               <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb mb-2">
+                     <li class="breadcrumb-item"><a href="#">App Settings</a></li>
+                     <li class="breadcrumb-item active" aria-current="page">Team Members</li>
+                  </ol>
+               </nav>
+               <!-- breadcrumbs end -->
+               <!-- team section start -->
+               <section class="setting team">
+                  <div class="section-title">
+                     <h2 class="fw-semibold mb-0">Team members</h2>
+                     <p class="mb-0">Invite your team to help manage posts, create changelogs, write help center articles, etc...</p>
+                  </div>
+                  <div class="setting-wrapper team-wrapper">
+                     <div class="team-widget rounded-3">
+                        <div class="team-widget-title mb-4">
+                           <h6 class="fw-semibold">Add team member</h6>
+                           <p class="mb-0">Enter your team members email address to invite them to your organization.</p>
+                        </div>
+                        <form action="#" class="add-member-form form d-flex align-items-start flex-column gap-4">
+                           <div class="form-input-wrapper w-100">
+                              <div class="row">
+                                 <div class="col-md-4">
+                                    <div class="form-input">
+                                       <label for="first-name" class="input-label mb-1 fw-medium">First name</label>
+                                       <input type="text" id="first-name" class="input-field w-100 rounded" placeholder="Your first name">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-4">
+                                    <div class="form-input">
+                                       <label for="email" class="input-label mb-1 fw-medium">Email address</label>
+                                       <input type="email" id="email" class="input-field w-100 rounded" placeholder="Your email address">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-4">
+                                    <div class="form-input">
+                                       <label for="role" class="input-label mb-1 fw-medium">Role</label>
+                                       <select id="role" class="input-field w-100 rounded bg-white">
+                                          <option value="select">Select</option>
+                                          <option value="ceo">CEO</option>
+                                          <option value="cto">CTO</option>
+                                          <option value="manager">Manager</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="d-flex gap-3 flex-wrap">
+                              <button type="button" class="form-btn theme-btn fw-semibold rounded border-0" id="success-toast-toggle-btn">Send invite</button>
+                              <button type="button" class="form-btn theme-btn secondary fw-semibold rounded" id="error-toast-toggle-btn">Cancel</button>
+                           </div>
+                        </form>
+                     </div>
+                     <div class="team-widget member-list-widget rounded-top-3 p-0">
+                        <div class="team-widget-title">
+                           <h6 class="fw-semibold">List of team members</h6>
+                           <p class="mb-0">Enter your team members email address to invite them to your organization.</p>
+                        </div>
+                        <div class="member-list">
+                           <table class="datatable-active">
+                              <thead>
+                                 <th class="visually-hidden">Table Header</th>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td>
+                                       <div class="single-member d-flex flex-column flex-sm-row align-items-end align-items-sm-center justify-content-between gap-3">
+                                          <div class="member-info d-flex align-items-center gap-3">
+                                             <div class="member-img d-flex align-items-center justify-content-center rounded-circle text-white fw-semibold">
+                                                <img src="assets/img/profile-pic-2.jpg" alt="profile img" class="w-100 h-100 object-fit-cover rounded-circle">
+                                             </div>
+                                             <div>
+                                                <h6 class="member-name fw-semibold mb-0">Emily L. Schulz</h6>
+                                                <p class="mb-0"><span>Manger,</span> <a href="mailto:emaily.schulz@amazonmail.com">emaily.schulz@amazonmail.com</a></p>
+                                             </div>
+                                          </div>
+                                          <div class="single-member-right d-flex align-items-center gap-3">
+                                             <span class="member-status d-inline-block rounded-pill px-2 fw-semibold">Active Member</span>
+                                             <div class="member-action-dropdown dropdown">
+                                                <button title="toggle dropdown" class="dropdown-toggle d-flex align-items-center justify-content-center bg-transparent border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-ellipsis-vertical"></i></button>
+                                                <ul class="dropdown-menu dropdown-menu-end p-2 rounded-3 rounded-top-0 border-top-0">
+                                                   <li><a class="dropdown-item" href="#">View</a></li>
+                                                   <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                </ul>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td>
+                                       <div class="single-member d-flex flex-column flex-sm-row align-items-end align-items-sm-center justify-content-between gap-3">
+                                          <div class="member-info d-flex align-items-center gap-3">
+                                             <div class="member-img d-flex align-items-center justify-content-center rounded-circle text-white fw-semibold">
+                                                <img src="assets/img/profile-pic-3.jpg" alt="profile img" class="w-100 h-100 object-fit-cover rounded-circle">
+                                             </div>
+                                             <div>
+                                                <h6 class="member-name fw-semibold mb-0">Bonnie C. Tully</h6>
+                                                <p class="mb-0"><span>Admin,</span> <a href="mailto:bonnie.tully@amazonmail.com">bonnie.tully@amazonmail.com</a></p>
+                                             </div>
+                                          </div>
+                                          <div class="single-member-right d-flex align-items-center gap-3">
+                                             <span class="member-status d-inline-block rounded-pill px-2 fw-semibold">Inactive Member</span>
+                                             <div class="member-action-dropdown dropdown">
+                                                <button title="toggle dropdown" class="dropdown-toggle d-flex align-items-center justify-content-center bg-transparent border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-ellipsis-vertical"></i></button>
+                                                <ul class="dropdown-menu dropdown-menu-end p-2 rounded-3 rounded-top-0 border-top-0">
+                                                   <li><a class="dropdown-item" href="#">View</a></li>
+                                                   <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                </ul>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td>
+                                       <div class="single-member d-flex flex-column flex-sm-row align-items-end align-items-sm-center justify-content-between gap-3">
+                                          <div class="member-info d-flex align-items-center gap-3">
+                                             <div class="member-img d-flex align-items-center justify-content-center rounded-circle text-white fw-semibold"> WN </div>
+                                             <div>
+                                                <h6 class="member-name fw-semibold mb-0">William C. Nettles</h6>
+                                                <p class="mb-0"><span>Editor,</span> <a href="mailto:emaily.schulz@amazonmail.com">bonnie.tully@amazonmail.com</a></p>
+                                             </div>
+                                          </div>
+                                          <div class="single-member-right d-flex align-items-center gap-3">
+                                             <span class="member-status d-inline-block rounded-pill px-2 fw-semibold">Inactive Member</span>
+                                             <div class="member-action-dropdown dropdown">
+                                                <button title="toggle dropdown" class="dropdown-toggle d-flex align-items-center justify-content-center bg-transparent border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-ellipsis-vertical"></i></button>
+                                                <ul class="dropdown-menu dropdown-menu-end p-2 rounded-3 rounded-top-0 border-top-0">
+                                                   <li><a class="dropdown-item" href="#">View</a></li>
+                                                   <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                </ul>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <!-- team section end -->
+            </div>
+         </div>
+         <!-- main content end -->
+      </div>
+   </main>
+   <!-- footer section start -->
+   <footer class="footer">
+      <p class="copyright-text text-center mb-0 fw-semibold">© 2025 InsightHQ. All rights reserved</p>
+   </footer>
+   <!-- footer section end -->
+   <!-- success toast message start -->
+   <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="success-toast">
+      <div class="toast-container d-flex rounded overflow-hidden">
+         <button type="button" title="info" class="info-btn theme-btn flex-shrink-0 fs-6 p-3 border-0 mb-0"><i class="fa-regular fa-circle-info"></i></button>
+         <div class="toast-wrapper flex-grow-1 d-flex gap-2 bg-white py-2 py-sm-3 ps-3 pe-2 rounded rounded-start-0">
+            <p class="toast-message mb-0 flex-grow-1">Success! Team member invite has been sent.</p>
+            <button type="button" title="close toast" class="toast-close-btn d-flex align-items-center justify-content-center align-self-center flex-shrink-0 bg-transparent border-0" data-bs-dismiss="toast"><i class="fa-regular fa-xmark"></i></button>
+         </div>
+      </div>
+   </div>
+   <!-- success toast message end -->
+   <!-- error toast message start -->
+   <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="error-toast">
+      <div class="toast-container d-flex rounded overflow-hidden">
+         <button type="button" title="info" class="danger-btn theme-btn flex-shrink-0 fs-6 p-3 border-0 mb-0"><img src="assets/img/icon/error.svg" alt="error"></button>
+         <div class="toast-wrapper flex-grow-1 d-flex gap-2 bg-white py-2 py-sm-3 ps-3 pe-2 rounded rounded-start-0">
+            <p class="toast-message mb-0 flex-grow-1">Error! Team member invite has been sent.</p>
+            <button type="button" title="close toast" class="toast-close-btn d-flex align-items-center justify-content-center align-self-center flex-shrink-0 bg-transparent border-0" data-bs-dismiss="toast"><i class="fa-regular fa-xmark"></i></button>
+         </div>
+      </div>
+   </div>
+   <!-- error toast message end -->
+   <!-- Optional JavaScript; choose one of the two! -->
+   <script src="assets/js/jquery-3.7.1.min.js"></script>
+   <script src="assets/js/popper.min.js"></script>
+   <script src="assets/js/bootstrap.min.js"></script>
+   <script src="assets/js/select2.min.js"></script>
+   <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+   <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.min.js"></script>
+   <script src="assets/js/main.js"></script>
+
+   <script>
+      $(document).ready(function() {
+         $(".datatable-active").DataTable();
+      });
+   </script>
+
+</body>
+
+</html>

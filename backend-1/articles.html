@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <link href="css/customstyle.css" rel="stylesheet">
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Same sidebar structure -->
+        <div class="sidebar bg-dark text-white">
+            <div class="sidebar-header p-3">
+                <h4>Admin Panel</h4>
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link"><i class="bi bi-speedometer2"></i> Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="clients.html" class="nav-link"><i class="bi bi-people"></i> Clients</a>
+                </li>
+                <li class="nav-item">
+                    <a href="changelog.html" class="nav-link"><i class="bi bi-clock-history"></i> Changelog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="articles.html" class="nav-link active"><i class="bi bi-file-text"></i> Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a href="knowledge.html" class="nav-link"><i class="bi bi-book"></i> Knowledge Board</a>
+                </li>
+                <li class="nav-item">
+                    <a href="billing.html" class="nav-link"><i class="bi bi-credit-card"></i> Billing & Payments</a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link"><i class="bi bi-gear"></i> Settings</a>
+                </li>
+                <li class="nav-item mt-auto">
+                    <a href="index.html" class="nav-link"><i class="bi bi-box-arrow-left"></i> Logoff</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="container-fluid p-4">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2>Articles</h2>
+                    <button class="btn btn-primary">
+                        <i class="bi bi-plus-circle me-2"></i>Add Article
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <table id="articlesTable" class="table table-striped" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Status</th>
+                                    <th>Article Name</th>
+                                    <th>Public URL</th>
+                                    <th>Total View</th>
+                                    <th>Unique View</th>
+                                    <th>Work Book</th>
+                                    <th>NSP Score</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        function getNSPScoreHTML(score) {
+            const smileys = {
+                happy: '<i class="bi bi-emoji-smile-fill text-success"></i>',
+                neutral: '<i class="bi bi-emoji-neutral-fill text-warning"></i>',
+                sad: '<i class="bi bi-emoji-frown-fill text-danger"></i>'
+            };
+            
+            let html = '';
+            if (score >= 8) {
+                html = `${smileys.happy} ${score}`;
+            } else if (score >= 5) {
+                html = `${smileys.neutral} ${score}`;
+            } else {
+                html = `${smileys.sad} ${score}`;
+            }
+            return html;
+        }
+
+        $(document).ready(function() {
+            $('#articlesTable').DataTable({
+                pageLength: 10,
+                order: [[0, 'desc']],
+                data: [
+                    ['ART001', '<span class="badge bg-success">Active</span>', 'Getting Started with API Integration', 'https://articles.domain.com/art001', '2500', '1800', 'API Basics', getNSPScoreHTML(9), '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['ART002', '<span class="badge bg-warning">Draft</span>', 'Advanced Security Practices', 'https://articles.domain.com/art002', '0', '0', 'Security', getNSPScoreHTML(7), '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['ART003', '<span class="badge bg-info">Scheduled</span>', 'Database Optimization Guide', 'https://articles.domain.com/art003', '0', '0', 'Database', getNSPScoreHTML(8), '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['ART004', '<span class="badge bg-success">Active</span>', 'User Authentication Best Practices', 'https://articles.domain.com/art004', '1890', '1200', 'Security', getNSPScoreHTML(9), '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['ART005', '<span class="badge bg-danger">Inactive</span>', 'Legacy System Migration', 'https://articles.domain.com/art005', '1200', '800', 'Migration', getNSPScoreHTML(6), '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['ART006', '<span class="badge bg-success">Active</span>', 'Cloud Infrastructure Setup', 'https://articles.domain.com/art006', '3200', '2100', 'Cloud', getNSPScoreHTML(8), '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['ART007', '<span class="badge bg-warning">Draft</span>', 'Mobile App Development Guide', 'https://articles.domain.com/art007', '0', '0', 'Mobile', getNSPScoreHTML(7), '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['ART008', '<span class="badge bg-success">Active</span>', 'Performance Optimization Tips', 'https://articles.domain.com/art008', '2800', '1900', 'Performance', getNSPScoreHTML(9), '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['ART009', '<span class="badge bg-info">Scheduled</span>', 'Frontend Development Best Practices', 'https://articles.domain.com/art009', '0', '0', 'Frontend', getNSPScoreHTML(8), '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>'],
+                    ['ART010', '<span class="badge bg-success">Active</span>', 'DevOps Pipeline Setup', 'https://articles.domain.com/art010', '1500', '1000', 'DevOps', getNSPScoreHTML(7), '<a href="#" class="text-primary"><i class="bi bi-eye"></i></a>']
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

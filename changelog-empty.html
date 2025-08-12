@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- favicon -->
+   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+   <link rel="icon" sizes="32x32" href="assets/img/favicon/favicon-32x32.png" type="image/png">
+   <link rel="icon" sizes="16x16" href="assets/img/favicon/favicon-16x16.png" type="image/png">
+   <link rel="shortcut icon" href="assets/img/favicon/favicon.ico" type="image/x-icon">
+   <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+   <link rel="stylesheet" href="assets/css/select2.min.css">
+   <link rel="stylesheet" href="assets/css/spectrum.min.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/responsive.css">
+   <title>Changelog - Empty</title>
+</head>
+
+<body>
+   <!-- header section start -->
+   <header class="header sticky-top">
+      <div class="header-wrapper d-flex align-items-center justify-content-between gap-4">
+         <div class="header-left d-flex align-items-center gap-3">
+            <button type="button" title="close sidebar" class="sidebar-toggle bg-transparent border-0 fs-5 d-xl-none"><i class="fa-regular fa-bars"></i></button>
+            <a href="#" class="header-logo logo d-inline-block"><img src="assets/img/logo.svg" alt="logo"></a>
+         </div>
+         <div class="profile-container d-flex align-items-center justify-content-end pb-0">
+            <div class="profile d-flex align-items-center gap-2 gap-sm-3">
+               <img src="assets/img/profile-img.png" alt="profile-img" class="profile-img rounded-circle object-fit-cover">
+               <div class="profile-wrapper d-flex align-items-end gap-2">
+                  <div class="profile-info">
+                     <span class="d-block">Welcome</span>
+                     <h6 class="fw-semibold mb-0">Clarence D. Shock</h6>
+                  </div>
+                  <div class="header-dropdown dropdown">
+                     <button type="button" title="action" data-bs-toggle="dropdown" aria-expanded="false" class="header-dropdown-toggle dropdown-toggle d-inline-flex bg-transparent border-0"><i class="fa-solid fa-caret-down"></i></button>
+                     <ul class="dropdown-menu rounded-0 border-top-0 border-bottom-0">
+                        <li><a class="dropdown-item" href="#">Update Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Change Password</a></li>
+                        <li><a class="dropdown-item" href="#">Logoff</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <button type="button" title="sign out" data-bs-toggle="tooltip" data-bs-title="Log out" class="logout-btn d-flex align-items-center justify-content-center bg-transparent border-0"><i class="fa-regular fa-arrow-right-from-bracket"></i></button>
+         </div>
+      </div>
+   </header>
+   <!-- header section end -->
+   <main>
+      <div class="main-container d-flex position-relative">
+         <!-- sidebar start -->
+         <aside class="sidebar sticky-top overflow-auto bg-white flex-shrink-0">
+            <div class="sidebar-header sticky-top text-end d-xl-none p-3">
+               <button type="button" title="close sidebar" class="sidebar-toggle bg-transparent border-0 fs-5"><i class="fa-regular fa-xmark"></i></button>
+            </div>
+            <div class="sidebar-menu d-flex flex-column">
+               <div class="sidebar-menu-block">
+                  <h6 class="sidebar-menu-title fw-semibold text-uppercase">Navigation</h6>
+                  <ul class="sidebar-menu-list">
+                     <li class="sidebar-menu-item">
+                        <a href="dashboard.html" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/home.png" alt="home" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Dashboard</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="changelog.html" class="sidebar-menu-link d-flex align-items-center active">
+                           <img src="assets/img/icon/megaphone.png" alt="megaphone" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Announcement</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/feedback.png" alt="feedback" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Feedback</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/roadmap.png" alt="roadmap" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Product Roadmap</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/star-comment.png" alt="star-comment" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Testimonials</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="help-center.html" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/book.png" alt="book" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Knowledge Board</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="sidebar-menu-block">
+                  <h6 class="sidebar-menu-title fw-semibold text-uppercase">User</h6>
+                  <ul class="sidebar-menu-list">
+                     <li class="sidebar-menu-item">
+                        <a href="subscribe-list.html" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/list.png" alt="list" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Subscribe List</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="subscribe-segmentation.html" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/user.png" alt="user avatar" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Subscribe Segmentation</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/user.png" alt="user avatar" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Personas</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="sidebar-menu-block">
+                  <h6 class="sidebar-menu-title fw-semibold text-uppercase">Team members</h6>
+                  <ul class="sidebar-menu-list">
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/user-plus.png" alt="user plus" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Invite a Team Member</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="sidebar-menu-block">
+                  <h6 class="sidebar-menu-title fw-semibold text-uppercase">Settings</h6>
+                  <ul class="sidebar-menu-list">
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/settings.png" alt="settings" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">App Settings</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="#" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/website.png" alt="website" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">View Your Website</span>
+                        </a>
+                     </li>
+                     <li class="sidebar-menu-item">
+                        <a href="widget.html" class="sidebar-menu-link d-flex align-items-center">
+                           <img src="assets/img/icon/widget.png" alt="widget" class="sidebar-menu-link-icon flex-shrink-0">
+                           <span class="sidebar-menu-link-text">Your Widget</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </aside>
+         <!-- sidebar overlay -->
+         <div class="sidebar-overlay fixed-top w-100 h-100 d-xl-none"></div>
+         <!-- sidebar end -->
+         <!-- main content start -->
+         <div class="main-content flex-grow-1 overflow-auto">
+            <div class="main-content-wrapper">
+               <!-- breadcrumbs start -->
+               <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb mb-2">
+                     <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                     <li class="breadcrumb-item active" aria-current="page">Announcement</li>
+                  </ol>
+               </nav>
+               <!-- breadcrumbs end -->
+               <!-- widget section start -->
+               <section class="announcement empty">
+                  <div class="section-title mb-4">
+                     <h2 class="fw-semibold mb-0">Announcements + Left image + No Category</h2>
+                     <p class="mb-0">At GitHub, we have created a set of guidelines that contributors and maintainers can reference when creating and updating components. These guidelines are available to read at our open source repository. <a href="#" class="text-decoration-underline">Read the authoring guidelines</a></p>
+                  </div>
+                  <div class="announcement-wrapper mx-auto">
+                     <div class="btn-wrapper d-flex align-items-center justify-content-center gap-2 flex-wrap mb-4">
+                        <a href="#" class="theme-btn sm fw-semibold rounded d-inline-block">Add new announcement / changelog</a>
+                        <a href="#" class="theme-btn sm secondary fw-semibold rounded d-inline-block">Changelog Settings</a>
+                     </div>
+                     <img src="assets/img/empty.png" alt="empty" class="empty-img w-100">
+                     <div class="get-started-changelog">
+                        <div class="get-started-changelog-title mb-4">
+                           <h6 class="fw-semibold mb-2 pb-1">Get started with the Changelog</h6>
+                           <p class="mb-0">Here is a list of recommended actions to help you get the most out of our Changelog module.</p>
+                        </div>
+                        <div class="get-started-card-wrapper">
+                           <div class="row">
+                              <div class="col-sm-6">
+                                 <div class="get-started-card card align-items-start rounded-0 bg-white h-100">
+                                    <h5 class="card-title mb-2 fw-semibold text-black">Import email subscribers</h5>
+                                    <p class="card-desc mb-3">Import your email list to send notification emails to your users.</p>
+                                    <a href="#" class="widget-item-btn d-inline-block rounded fw-semibold">Changelog Settings</a>
+                                 </div>
+                              </div>
+                              <div class="col-sm-6">
+                                 <div class="get-started-card card align-items-start rounded-0 bg-white h-100">
+                                    <h5 class="card-title mb-2 fw-semibold text-black">Embed the changelog in your app</h5>
+                                    <p class="card-desc mb-3">Embed the changelog widget in your app to show your users what's new.</p>
+                                    <a href="#" class="widget-item-btn d-inline-block rounded fw-semibold">Embed Widget</a>
+                                 </div>
+                              </div>
+                              <div class="col-sm-6">
+                                 <div class="get-started-card card align-items-start rounded-0 bg-white h-100">
+                                    <h5 class="card-title mb-2 fw-semibold text-black">Share your public changelog page</h5>
+                                    <p class="card-desc mb-3">Share your public changelog page to show your users what's new.</p>
+                                    <a href="#" class="widget-item-btn d-inline-block rounded fw-semibold">Copy Public Link</a>
+                                 </div>
+                              </div>
+                              <div class="col-sm-6">
+                                 <div class="get-started-card card align-items-start rounded-0 bg-white h-100">
+                                    <h5 class="card-title mb-2 fw-semibold text-black">Publish your first changelog</h5>
+                                    <p class="card-desc mb-3">Create your first changelog to start tracking changes to your app.</p>
+                                    <a href="#" class="widget-item-btn d-inline-block rounded fw-semibold">Create Changelog</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <!-- widget section end -->
+            </div>
+         </div>
+         <!-- main content end -->
+      </div>
+   </main>
+   <!-- footer section start -->
+   <footer class="footer">
+      <p class="copyright-text text-center mb-0 fw-semibold">© 2025 InsightHQ. All rights reserved</p>
+   </footer>
+   <!-- footer section end -->
+   <!-- Optional JavaScript; choose one of the two! -->
+   <script src="assets/js/jquery-3.7.1.min.js"></script>
+   <script src="assets/js/popper.min.js"></script>
+   <script src="assets/js/bootstrap.min.js"></script>
+   <script src="assets/js/select2.min.js"></script>
+   <script src="assets/js/spectrum.min.js"></script>
+   <script src="assets/js/main.js"></script>
+</body>
+
+</html>
