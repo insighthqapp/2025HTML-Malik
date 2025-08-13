@@ -1,0 +1,71 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Reset Your Password</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin:0; padding:0; background-color:#f4f4f4; font-family: Arial, sans-serif;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td align="center" style="padding: 20px 0; background-color: #f4f4f4;">
+            <table border="0" cellpadding="0" cellspacing="0" width="600" style="background-color: #ffffff; border-radius: 8px; overflow: hidden;">
+
+                <!-- Header -->
+                <tr>
+                    <td align="center" style="background-color: #222; padding: 20px;">
+                        <h1 style="color: #ffffff; margin: 0; font-size: 24px;">WhoopBoard</h1>
+                    </td>
+                </tr>
+
+                <!-- Body -->
+                <tr>
+                    <td style="padding: 30px; color: #333333;">
+                        <h2 style="margin-top: 0;">Reset Your Password</h2>
+                        <p style="font-size: 16px; line-height: 1.5; margin-bottom: 20px;">
+                            Hi [User Name],
+                            <br><br>
+                            We received a request to reset your WhoopBoard password.
+                            Click the button below to set a new one.
+                        </p>
+
+                        <!-- Reset Button -->
+                        <p style="text-align: center; margin: 30px 0;">
+                            <a href="{{RESET_LINK}}"
+                               style="background-color: #007BFF; color: #ffffff; padding: 12px 24px;
+                          border-radius: 6px; text-decoration: none; font-weight: bold;
+                          display: inline-block;">
+                                Reset Password
+                            </a>
+                        </p>
+
+                        <!-- Fallback: Copy/Paste Link + Instructions -->
+                        <div style="font-size: 14px; color: #555; line-height: 1.6; margin-top: 10px;">
+                            <strong>Having trouble with the button?</strong><br>
+                            1) Copy the link below and paste it into your browser’s address bar.<br>
+                            2) If it doesn’t open, try a different browser or a private/incognito window.<br>
+                            3) For your security, don’t share this link with anyone.
+                            <div style="margin-top: 10px; background:#f7f7f7; border:1px solid #e5e5e5; border-radius:6px; padding:12px; word-break:break-all;">
+                                <a href="{{RESET_LINK}}" style="color:#007BFF; text-decoration:underline;">{{RESET_LINK}}</a>
+                            </div>
+                        </div>
+
+                        <p style="font-size: 14px; color: #555; margin-top: 20px;">
+                            If you didn’t request this change, you can safely ignore this email.
+                            The link will expire in <strong>24 hours</strong>.
+                        </p>
+                    </td>
+                </tr>
+
+                <!-- Footer -->
+                <tr>
+                    <td align="center" style="background-color: #000000; color: #ffffff; padding: 15px; font-size: 12px;">
+                        &copy; {{YEAR}} WhoopBoard. All rights reserved.
+                    </td>
+                </tr>
+
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
